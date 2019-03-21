@@ -19,7 +19,7 @@ namespace myRougelikeGame.Items.Wearable.Shoes
             setLevel(1);
             setDescribe("走着走着就掉了怎么办");
             setCost(getRandomNum(62, 92));
-            setEffecDescribe("全地形宝马拖孩\n敏捷+2");
+            setEffecDescribe("全地形宝马拖孩\n敏捷+2,减少移动消耗的精力");
             setQualityIndex((int)(getEndurance() * 100 / getMaxEndurance()));
             setIsEquited(false);
 
@@ -58,6 +58,7 @@ namespace myRougelikeGame.Items.Wearable.Shoes
             base.EquipItem(user);
            
             user.setHero_agility(user.getHero_agility() + getAdd_agility());
+            user.setEnergyConsumeByMove(user.getEnergyConsumeByMove() - 1);
            
           
         }
@@ -66,6 +67,7 @@ namespace myRougelikeGame.Items.Wearable.Shoes
             base.UnEquipItem(user);
            
             user.setHero_agility(user.getHero_agility() - getAdd_agility());
+            user.setEnergyConsumeByMove(user.getEnergyConsumeByMove() + 1);
            
 
 

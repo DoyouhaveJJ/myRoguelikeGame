@@ -26,7 +26,7 @@ namespace myRougelikeGame
         Translate tl = new Translate();
         defaultItem selectedItem;
         theHero owner;
-        Bag heroBag = new Bag();
+        Bag heroBag ;
         private System.Windows.Forms.ListBox MessageBoxShow;
         public System.Windows.Forms.ListBox getMessageBoxShow()
         {

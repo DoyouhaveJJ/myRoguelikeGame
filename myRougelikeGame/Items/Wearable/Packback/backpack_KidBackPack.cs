@@ -15,7 +15,7 @@ namespace myRougelikeGame.Items.Wearable.Packback
             setWeight(0.6);
             setMaxEndurance(getRandomNum(332, 542));
             setEndurance(getRandomNum(10, 331));
-            setEndurance_byStep(0.055);
+            setEndurance_byStep(0.03);
             setLevel(1);
             setDescribe("给小学生设计的");
             setCost(getRandomNum(62, 92));

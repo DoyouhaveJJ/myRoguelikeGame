@@ -18,10 +18,11 @@ namespace myRougelikeGame.Map
                 for (int j = 0; j < 400; j++) {
                     blocks[i, j] = new defaultBlock();
                     switch (br.once()) {
-                        case 1: blocks[i, j] = new blockPain();blocks[i,j].setID(400*i+j) ; break;
-                        case 2: blocks[i, j] = new blockForest(); blocks[i, j].setID(400 * i + j); break;
-                        case 3: blocks[i, j] = new blockLake(); blocks[i, j].setID(400 * i + j); break;
-                        case 4: blocks[i, j] = new blockHill(); blocks[i, j].setID(400 * i + j); break;
+                        case 1: { blocks[i, j] = new blockPain(); blocks[i, j].setID(400 * i + j); break; }
+                        case 2: { blocks[i, j] = new blockForest(); blocks[i, j].setID(400 * i + j); break; }
+                        case 3: { blocks[i, j] = new blockLake(); blocks[i, j].setID(400 * i + j); break; }
+                        case 4: { blocks[i, j] = new blockHill(); blocks[i, j].setID(400 * i + j); break; }
+                        case 5: { blocks[i, j] = new blockRuin(); blocks[i, j].setID(400 * i + j); break; }
                     }
                 }
             }

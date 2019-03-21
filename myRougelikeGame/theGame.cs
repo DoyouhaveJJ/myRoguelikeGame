@@ -301,6 +301,7 @@ namespace myRougelikeGame
                 case 2: { lb.ForeColor = System.Drawing.Color.DarkGreen; break; }
                 case 3: { lb.ForeColor = System.Drawing.Color.Blue; break; }
                 case 4: { lb.ForeColor = System.Drawing.Color.SaddleBrown; break; }
+                case 5: { lb.ForeColor = System.Drawing.Color.Gray; break; }
          }       
         }
 

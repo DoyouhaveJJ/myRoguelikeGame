@@ -11,20 +11,24 @@ namespace myRougelikeGame.Function
             private int i;
             public int once()
             {
-                i = myRandom.Next(1, 1000);
-                if (i <= 600)
+                i = myRandom.Next(1, 10000);
+                if (i <= 4243)
                 {
                     return 1;//1 = 平原
                 }
-                else if (i <= 800&&i>600) {
+                else if (i >= 4243&&i<6932) {
                     return 2;//2 = 森林
                 }
-                else if (i <= 900 && i > 800)
+                else if (i>= 6932 && i < 8279)
                 {
                     return 3;//3 = 湖泊
                 }
-                else {
+                else if (i >= 8279 && i < 9331)
+                {
                     return 4;//4 = 山地
+                }
+                else {
+                    return 5;//废墟
                 }
             }
     }

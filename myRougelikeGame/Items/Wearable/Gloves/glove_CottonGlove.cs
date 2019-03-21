@@ -20,7 +20,7 @@ namespace myRougelikeGame.Items.Wearable.Gloves
             setLevel(1);
             setDescribe("带上去可能防止受伤");
             setCost(getRandomNum(12, 22));
-            setEffecDescribe("软软的，99%棉\n耐力+8");
+            setEffecDescribe("软软的，99%棉\n耐力+8，减少攻击时消耗的精力");
             setQualityIndex((int)(getEndurance() * 100 / getMaxEndurance()));
             setIsEquited(false);
 
@@ -59,6 +59,7 @@ namespace myRougelikeGame.Items.Wearable.Gloves
             base.EquipItem(user);
            
             user.setHero_endurance(user.getHero_endurance() + getAdd_endurance());
+            user.setEnergyConsumeByAttack(user.getEnergyConsumeByAttack() - 3);
           
         }
         public override void UnEquipItem(Player.theHero user)
@@ -66,7 +67,7 @@ namespace myRougelikeGame.Items.Wearable.Gloves
             base.UnEquipItem(user);
            
             user.setHero_endurance(user.getHero_endurance() - getAdd_endurance());
-
+            user.setEnergyConsumeByAttack(user.getEnergyConsumeByAttack() + 3);
 
         }
     

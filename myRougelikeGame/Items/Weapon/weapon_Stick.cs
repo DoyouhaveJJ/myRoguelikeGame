@@ -15,7 +15,7 @@ namespace myRougelikeGame.Items.Weapon
             setWeight(0.3);
             setMaxEndurance(getRandomNum(60,90));
             setEndurance(getRandomNum(30, 60));
-            setEndurance_byStep(10);
+            setEndurance_byStep(0.04);
             setEndurance_byAttack(2);
             setEndurance_byUse(0.5);
             setLevel(1);

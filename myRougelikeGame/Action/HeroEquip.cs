@@ -251,6 +251,8 @@ namespace myRougelikeGame.Action
                         }
 
                 }
+
+                
             }
             else
             {

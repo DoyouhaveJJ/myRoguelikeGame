@@ -18,7 +18,7 @@ namespace myRougelikeGame.Items.Wearable.Belts
             setLevel(1);
             setDescribe("帆布腰带，可以用用。");
             setCost(15);
-            setEffecDescribe("戴在腰上，可能有点用，尤其是饿了的时候\n耐久+3");
+            setEffecDescribe("戴在腰上，可能有点用\n耐力+3每回合减少1点饥饿增加");
             setQualityIndex((int)(getEndurance() * 100 / getMaxEndurance()));
             setIsEquited(false);
 
@@ -57,11 +57,13 @@ namespace myRougelikeGame.Items.Wearable.Belts
         {
             base.EquipItem(user);
             user.setHero_endurance(user.getHero_endurance() + getAdd_endurance());
+            user.setHungryIncreaseByTurn(user.getHungryIncreaseByTurn() - 1);
         }
         public override void UnEquipItem(Player.theHero user)
         {
             base.UnEquipItem(user);
             user.setHero_endurance(user.getHero_endurance() - getAdd_endurance());
+            user.setHungryIncreaseByTurn(user.getHungryIncreaseByTurn() + 1);
         }
     }
 }

@@ -35,9 +35,14 @@ namespace myRougelikeGame
         private void button1_Click(object sender, EventArgs e)
         {
             HeroLootAction.Loot();
+            updata();
 
         }
+        private void updata() {
+            lootBar.Maximum = Lootage.getMaxLootIndex();
+            lootBar.Value = Lootage.getLootIndex();
 
+        }
 
 
 

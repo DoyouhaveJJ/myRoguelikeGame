@@ -778,7 +778,7 @@ namespace myRougelikeGame.Player
                     case 8: { this.maxTemperture = 10000; this.Temperature = 5000; this.minTemperature = 2000; break; }
                 }
             }
-            this.maxEnergy = 50 + (int)(this.hero_endurance * 0.9)-(int)(this.hero_age*0.5);
+            this.maxEnergy = 50 + (int)(this.hero_endurance * 0.9)-(int)(this.hero_age*0.3);
 
         }
 
@@ -798,16 +798,16 @@ namespace myRougelikeGame.Player
 
 
 
-        public void buildConsumeIndex() {
-            setEnergyConsumeByAttack(5);
-            setEnergyConsumeByCraft(10);
-            setEnergyConsumeByMagic(10);
-            setEnergyConsumeByMove(1);
-            setHungryIncreaseByTurn(2);
-            setEnergyConsumeByLoot(15);
-            setThristyIncreaseByTurn(4);
-            setPeeIncreaseIndex(0);
-            setShitIncreaseIndex(0);
+        public void buildConsumeIndex() { //消耗量
+            setEnergyConsumeByAttack(5);//攻击能量消耗量
+            setEnergyConsumeByCraft(10);//合成能量消耗量
+            setEnergyConsumeByMagic(10);//魔法能量消耗量
+            setEnergyConsumeByMove(4);//移动能量消耗量
+            setHungryIncreaseByTurn(2);//每回合增加的饥饿度
+            setEnergyConsumeByLoot(15);//搜刮消耗量
+            setThristyIncreaseByTurn(3);//每回合口渴增加量
+            setPeeIncreaseIndex(0);//每次增加的尿
+            setShitIncreaseIndex(0);//每次增加的屎
         }
 
 
@@ -821,7 +821,7 @@ namespace myRougelikeGame.Player
             heroIncreaseThristy();
         }
 
-        public void heroIncreaseHungry() {
+        public void heroIncreaseHungry() {//增加饥饿
             if (getHungry() + getHungryIncreaseByTurn() >= getMaxHungry()) {
                 setHungry(getMaxHungry());
                 return;
@@ -830,7 +830,7 @@ namespace myRougelikeGame.Player
             return;
         }
 
-        public void heroIncreaseThristy() {
+        public void heroIncreaseThristy() {//增加口渴
             if (getThirsty() + getThristyIncreaseByTurn() >= getMaxThirsty()) {
                 setThirsty(getMaxThirsty());
                 return;
@@ -839,7 +839,7 @@ namespace myRougelikeGame.Player
             return;
         }
 
-        public void heroIncreasePee() {
+        public void heroIncreasePee() {//增加尿量
             if (getPee() + getPeeIncreaseIndex() >= getMaxPee()) {
                 setPee(getMaxPee());
                 return;
@@ -853,7 +853,7 @@ namespace myRougelikeGame.Player
             return;
         }
 
-        public void heroIncreaseShit() {
+        public void heroIncreaseShit() {//增加屎量
             if (getShit() + getShitIncreaseIndex() >= getMaxShit())
             {
                 setShit(getMaxShit());
@@ -868,7 +868,7 @@ namespace myRougelikeGame.Player
             setShitIncreaseIndex((int)getShitIncreaseIndex() / dr.getRandomNum(1, 4));
             return;
         }
-        public void moveCauseDecreaseEnergy(){
+        public void moveCauseDecreaseEnergy(){//移动造成精力消耗
             if (getEnergy() - getEnergyConsumeByMove() <= 0)
             {
                 setEnergy(0);
@@ -880,7 +880,7 @@ namespace myRougelikeGame.Player
             }
         }
 
-        public void lootCauseDecreaseEnergy() {
+        public void lootCauseDecreaseEnergy() {//搜刮造成精力消耗
             if (getEnergy() - getEnergyConsumeByLoot() <= 0)
             {
                 setEnergy(0);
@@ -893,7 +893,7 @@ namespace myRougelikeGame.Player
             }   
         }
 
-        public void attackCauseDecreaseEnergy()
+        public void attackCauseDecreaseEnergy()//攻击造成精力消耗
         {
             if (getEnergy() - getEnergyConsumeByAttack() <= 0)
             {
@@ -907,7 +907,7 @@ namespace myRougelikeGame.Player
             }
         }
 
-        public void magicCauseDecreaseEnergy()
+        public void magicCauseDecreaseEnergy()//魔法造成精力消耗
         {
             if (getEnergy() - getEnergyConsumeByMagic() <= 0)
             {
@@ -920,7 +920,7 @@ namespace myRougelikeGame.Player
                 return;
             }
         }
-        public void craftCauseDecreaseEnergy()
+        public void craftCauseDecreaseEnergy()//合成造成精力消耗
         {
             if (getEnergy() - getEnergyConsumeByCraft() <= 0)
             {

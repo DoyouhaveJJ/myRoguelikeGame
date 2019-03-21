@@ -104,10 +104,12 @@
     <Compile Include="Loot\hillLoot.cs" />
     <Compile Include="Loot\lakeLoot.cs" />
     <Compile Include="Loot\painLoot.cs" />
+    <Compile Include="Loot\ruinLoot.cs" />
     <Compile Include="Map\block\blockForest.cs" />
     <Compile Include="Map\block\blockHill.cs" />
     <Compile Include="Map\block\blockLake.cs" />
     <Compile Include="Map\block\blockPain.cs" />
+    <Compile Include="Map\block\blockRuin.cs" />
     <Compile Include="Map\defaultBlock.cs" />
     <Compile Include="Mob\defaultMob.cs" />
     <Compile Include="Mob\Enemy\enemy_Goblin.cs" />

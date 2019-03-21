@@ -50,6 +50,22 @@ namespace myRougelikeGame.Player
             setMaxBurden(owner.getMaxBurden());
             setMaxSpace(6 + getExtarRoom());//容量6==无背包
             owner.setBurden(owner.getHeroBag().getBurdenNow());
+            if (getSpaceNow() > getMaxSpace()) {
+                int count = 0, aim = getSpaceNow() - getMaxSpace();
+                for (int i = 0; i < itemArray.Count; i++) {
+                    if (((defaultItem)itemArray[i]).getIsEquited()) {
+                        continue;
+                    }
+                    if (count==aim) {
+                        break;
+                    }
+                    owner.getStandBlock().getItemInGround().Add(((defaultItem)itemArray[i]));
+                    owner.getMessageBox().Items.Add(((defaultItem)itemArray[i]).getName() + "掉在地上了！");
+                    count++;
+                    itemArray.RemoveAt(i);
+                    i--;
+                }
+            }
 
         }
         public int getExtarRoom() {
@@ -85,8 +101,9 @@ namespace myRougelikeGame.Player
         }
 
         public void DestoryAnItem(defaultItem item){
-
+            
             HDI.DestoryAnItem(owner,item,itemArray);
+            updata(owner);
             /*
             int i = itemArray.IndexOf(item);
             itemArray.RemoveAt(i);
