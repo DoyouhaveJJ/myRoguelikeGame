@@ -28,3 +28,5 @@ C:\Documents and Settings\DoyouhaveJJ\桌面\playground\myRougelikeGame\myRougel
 C:\Documents and Settings\DoyouhaveJJ\桌面\playground\myRougelikeGame\myRougelikeGame\obj\x86\Debug\myRougelikeGame.theBattle.resources
 C:\Documents and Settings\DoyouhaveJJ\桌面\playground\myRougelikeGame\myRougelikeGame\obj\x86\Debug\myRougelikeGame.theLoot.resources
 C:\Documents and Settings\DoyouhaveJJ\桌面\playground\myRougelikeGame\myRougelikeGame\obj\x86\Debug\myRougelikeGame.theBlock.resources
+X:\myRoguelikeGame\myRougelikeGame\obj\x86\Debug\myRougelikeGame.exe
+X:\myRoguelikeGame\myRougelikeGame\obj\x86\Debug\myRougelikeGame.pdb
