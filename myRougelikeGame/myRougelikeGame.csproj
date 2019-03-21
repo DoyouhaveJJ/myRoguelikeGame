@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0CDDC72-7BE9-484C-86B1-75C3A4F658D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>myRougelikeGame</RootNamespace>
+    <AssemblyName>myRougelikeGame</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\AddItem.cs" />
+    <Compile Include="Action\EnemyAttack.cs" />
+    <Compile Include="Action\HeroAttack.cs" />
+    <Compile Include="Action\HeroDestoryItem.cs" />
+    <Compile Include="Action\HeroEquip.cs" />
+    <Compile Include="Action\HeroLevelUp.cs" />
+    <Compile Include="Action\HeroLoot.cs" />
+    <Compile Include="Action\HeroPickItems.cs" />
+    <Compile Include="Action\Judge.cs" />
+    <Compile Include="Action\MeetEnemy.cs" />
+    <Compile Include="AI\defaultAI.cs" />
+    <Compile Include="AI\easyBattleAI.cs" />
+    <Compile Include="Battle\BattleField.cs" />
+    <Compile Include="Function\Translate.cs" />
+    <Compile Include="Help\AboutHeroSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\AboutHeroSetting.Designer.cs">
+      <DependentUpon>AboutHeroSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\blockRandom.cs" />
+    <Compile Include="Function\DIYRandom.cs" />
+    <Compile Include="Help\HelpItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\HelpItem.Designer.cs">
+      <DependentUpon>HelpItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\defaultItem.cs" />
+    <Compile Include="Items\Food\food_Apple.cs" />
+    <Compile Include="Items\Food\food_rawWater.cs" />
+    <Compile Include="Items\Weapon\weapon_LongStick.cs" />
+    <Compile Include="Items\Weapon\weapon_Stick.cs" />
+    <Compile Include="Items\Wearable\BagForHand\bagforhand_PlasticBag.cs" />
+    <Compile Include="Items\Wearable\Belts\belt_WovenBelt.cs" />
+    <Compile Include="Items\Wearable\Clothes\clothes_SackCloth.cs" />
+    <Compile Include="Items\Wearable\Earplugs\earplug_Runner.cs" />
+    <Compile Include="Items\Wearable\Glasses\glass_NoGlass.cs" />
+    <Compile Include="Items\Wearable\Gloves\glove_CottonGlove.cs" />
+    <Compile Include="Items\Wearable\Hats\hat_GreenHat.cs" />
+    <Compile Include="Items\Wearable\Masks\mask_CheapMask.cs" />
+    <Compile Include="Items\Wearable\NeckLace\necklace_PlasticNeckLace.cs" />
+    <Compile Include="Items\Wearable\Packback\backpack_KidBackPack.cs" />
+    <Compile Include="Items\Wearable\Pants\pants_BadPants.cs" />
+    <Compile Include="Items\Wearable\Pocked\pocked_SmallPocked.cs" />
+    <Compile Include="Items\Wearable\Rings\ring_ToyRing.cs" />
+    <Compile Include="Items\Wearable\Shoes\shoes_Slippers.cs" />
+    <Compile Include="Items\Wearable\SignsForArm\signforarm_NameBrand.cs" />
+    <Compile Include="Items\Wearable\SignsForChest\signforchest_MarkSign.cs" />
+    <Compile Include="Items\Wearable\Stocks\stock_WarmStock.cs" />
+    <Compile Include="Loot\defaultLoot.cs" />
+    <Compile Include="Loot\forestLoot.cs" />
+    <Compile Include="Loot\hillLoot.cs" />
+    <Compile Include="Loot\lakeLoot.cs" />
+    <Compile Include="Loot\painLoot.cs" />
+    <Compile Include="Map\block\blockForest.cs" />
+    <Compile Include="Map\block\blockHill.cs" />
+    <Compile Include="Map\block\blockLake.cs" />
+    <Compile Include="Map\block\blockPain.cs" />
+    <Compile Include="Map\defaultBlock.cs" />
+    <Compile Include="Mob\defaultMob.cs" />
+    <Compile Include="Mob\Enemy\enemy_Goblin.cs" />
+    <Compile Include="Mob\Enemy\enemy_Slime.cs" />
+    <Compile Include="Player\Bag.cs" />
+    <Compile Include="Player\Body\Chest.cs" />
+    <Compile Include="Player\Body\Head.cs" />
+    <Compile Include="Player\Body\LeftArm.cs" />
+    <Compile Include="Player\Body\LeftFoot.cs" />
+    <Compile Include="Player\Body\LeftHand.cs" />
+    <Compile Include="Player\Body\LeftLeg.cs" />
+    <Compile Include="Player\Body\Neck.cs" />
+    <Compile Include="Player\Body\RightArm.cs" />
+    <Compile Include="Player\Body\RightFoot.cs" />
+    <Compile Include="Player\Body\RightHand.cs" />
+    <Compile Include="Player\Body\RightLeg.cs" />
+    <Compile Include="Player\Body\Web.cs" />
+    <Compile Include="SmallForm\theChest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theChest.Designer.cs">
+      <DependentUpon>theChest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theHead.Designer.cs">
+      <DependentUpon>theHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theLeftArm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theLeftArm.Designer.cs">
+      <DependentUpon>theLeftArm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theLeftFoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theLeftFoot.Designer.cs">
+      <DependentUpon>theLeftFoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theLeftHand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theLeftHand.Designer.cs">
+      <DependentUpon>theLeftHand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theLeftLeg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theLeftLeg.Designer.cs">
+      <DependentUpon>theLeftLeg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theNeck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theNeck.Designer.cs">
+      <DependentUpon>theNeck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theRightArm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theRightArm.Designer.cs">
+      <DependentUpon>theRightArm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theRightFoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theRightFoot.Designer.cs">
+      <DependentUpon>theRightFoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theRightHand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theRightHand.Designer.cs">
+      <DependentUpon>theRightHand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theRightLeg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theRightLeg.Designer.cs">
+      <DependentUpon>theRightLeg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallForm\theWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallForm\theWeb.Designer.cs">
+      <DependentUpon>theWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theBag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theBag.Designer.cs">
+      <DependentUpon>theBag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theBattle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theBattle.Designer.cs">
+      <DependentUpon>theBattle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theBlock.Designer.cs">
+      <DependentUpon>theBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theLoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theLoot.Designer.cs">
+      <DependentUpon>theLoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="thePlayer.Designer.cs">
+      <DependentUpon>thePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map\block.cs" />
+    <Compile Include="Map\world.cs" />
+    <Compile Include="Player\man.cs" />
+    <Compile Include="theGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theGame.Designer.cs">
+      <DependentUpon>theGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player\theHero.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="setMyHero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setMyHero.Designer.cs">
+      <DependentUpon>setMyHero.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Help\AboutHeroSetting.resx">
+      <DependentUpon>AboutHeroSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\HelpItem.resx">
+      <DependentUpon>HelpItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="setMyHero.resx">
+      <DependentUpon>setMyHero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theChest.resx">
+      <DependentUpon>theChest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theHead.resx">
+      <DependentUpon>theHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theLeftArm.resx">
+      <DependentUpon>theLeftArm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theLeftFoot.resx">
+      <DependentUpon>theLeftFoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theLeftHand.resx">
+      <DependentUpon>theLeftHand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theLeftLeg.resx">
+      <DependentUpon>theLeftLeg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theNeck.resx">
+      <DependentUpon>theNeck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theRightArm.resx">
+      <DependentUpon>theRightArm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theRightFoot.resx">
+      <DependentUpon>theRightFoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theRightHand.resx">
+      <DependentUpon>theRightHand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theRightLeg.resx">
+      <DependentUpon>theRightLeg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallForm\theWeb.resx">
+      <DependentUpon>theWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theBag.resx">
+      <DependentUpon>theBag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theBattle.resx">
+      <DependentUpon>theBattle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theBlock.resx">
+      <DependentUpon>theBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theGame.resx">
+      <DependentUpon>theGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theLoot.resx">
+      <DependentUpon>theLoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thePlayer.resx">
+      <DependentUpon>thePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\block.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Function.blockRandom.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Function.DIYRandom.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Function.Translate.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Help.aboutHeroSetting.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Items.defaultItem.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Items.Food.food_Apple.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Items.Food.food_rawWater.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Map.world.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Player.Bag.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Player.man.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Player.theHero.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\myRougelikeGame.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\setMyHero.datasource" />
+    <None Include="Properties\DataSources\theBag.datasource" />
+    <None Include="Properties\DataSources\theGame.datasource" />
+    <None Include="Properties\DataSources\thePlayer.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
