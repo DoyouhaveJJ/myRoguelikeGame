@@ -18,7 +18,6 @@ namespace myRougelikeGame
     {
         HeroAttack HeroAttackAction = new HeroAttack();
         EnemyAttack EnemyAttackAction = new EnemyAttack();
-
         BattleField BF;
         public int theDistence;
         public string EnemylastMove;
@@ -27,12 +26,10 @@ namespace myRougelikeGame
         {
             InitializeComponent();
         }
-
         private void BattleMsg_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void theBattle_Load(object sender, EventArgs e)
         {
             BF = (BattleField)this.Tag;
@@ -44,18 +41,13 @@ namespace myRougelikeGame
             heroName.Text = BF.getMyHero().GetName();
             enemyName.Text = BF.getTheMob().getMob_Name();
             enemyLevel.Text = BF.getTheMob().getMob_Level()+"";
-
             updata();
-            
-
         }
-
         public void EndTurn() {
-
             BF.getTheMob().getAI().setDistenceNow(theDistence);
             BF.getTheMob().getAI().JudgeOnce();
+            BF.getBseo().judgeOnce(BF.getMyHero(), BF.getTheMob());
             updata();
-        
         }
         public void updata(){
             if (BF.getTheMob().isDead())
@@ -84,21 +76,18 @@ namespace myRougelikeGame
         private defaultMob initAnEnemy() {
             return new enemy_Slime();
         }
-
         private void fallBackBtn_Click(object sender, EventArgs e)
         {
             BF.setDistence(BF.getDistence() + 1);
             BF.setHeroLastMove("后退");
             EndTurn();
         }
-
         private void moveTowardBtn_Click(object sender, EventArgs e)
         {
             BF.setDistence(BF.getDistence() - 1);
             BF.setHeroLastMove("前进");
             EndTurn();
         }
-
         private void chargeBtn_Click(object sender, EventArgs e)
         {
             BF.setDistence(BF.getDistence() - 2);

@@ -62,6 +62,7 @@
     <Compile Include="AI\defaultAI.cs" />
     <Compile Include="AI\easyBattleAI.cs" />
     <Compile Include="Battle\BattleField.cs" />
+    <Compile Include="Battle\BattleSeeEachOther.cs" />
     <Compile Include="Function\Translate.cs" />
     <Compile Include="Help\AboutHeroSetting.cs">
       <SubType>Form</SubType>

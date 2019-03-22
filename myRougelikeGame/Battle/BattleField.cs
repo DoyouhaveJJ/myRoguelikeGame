@@ -9,12 +9,16 @@ namespace myRougelikeGame.Battle
 {
     class BattleField
     {
-
+        private BattleSeeEachOther bseo = new BattleSeeEachOther();
         private int Distence;
         private string EnemyLastMove;
         private string HeroLastMove;
         private theHero myHero;
         private defaultMob theMob;
+        public BattleField() {
+            bseo.init();
+        }
+
 
         public void clearBattle(){
             setDistence(20);
@@ -65,6 +69,14 @@ namespace myRougelikeGame.Battle
         public void setHeroLastMove(string heroLastMove)
         {
             HeroLastMove = heroLastMove;
+        }
+        public BattleSeeEachOther getBseo()
+        {
+            return bseo;
+        }
+        public void setBseo(BattleSeeEachOther bseo)
+        {
+            this.bseo = bseo;
         }
     }
 }
