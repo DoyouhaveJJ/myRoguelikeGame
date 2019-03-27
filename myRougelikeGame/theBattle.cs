@@ -11,14 +11,17 @@ using myRougelikeGame.Mob;
 using myRougelikeGame.Action;
 using myRougelikeGame.Player;
 using myRougelikeGame.Battle;
+using myRougelikeGame.Function;
 
 namespace myRougelikeGame
 {
     public partial class theBattle : Form
     {
+        BattleSeeEachOther BSEO = new BattleSeeEachOther();
         HeroAttack HeroAttackAction = new HeroAttack();
         EnemyAttack EnemyAttackAction = new EnemyAttack();
         BattleField BF;
+        DIYRandom dr = new DIYRandom();
         public int theDistence;
         public string EnemylastMove;
         public string HeroLastMove;
@@ -32,6 +35,7 @@ namespace myRougelikeGame
         }
         private void theBattle_Load(object sender, EventArgs e)
         {
+            BSEO.init();
             BF = (BattleField)this.Tag;
             EnemyAttackAction.setMessageBox(this.BattleMsg);
             HeroAttackAction.setMessageBox(this.BattleMsg);
@@ -39,14 +43,14 @@ namespace myRougelikeGame
             BF.getTheMob().getAI().setBf(BF);
             BF.getTheMob().getAI().setHero(BF.getMyHero());
             heroName.Text = BF.getMyHero().GetName();
-            enemyName.Text = BF.getTheMob().getMob_Name();
-            enemyLevel.Text = BF.getTheMob().getMob_Level()+"";
+            BSEO.judgeOnce(BF.getMyHero(), BF.getTheMob());
             updata();
         }
         public void EndTurn() {
             BF.getTheMob().getAI().setDistenceNow(theDistence);
             BF.getTheMob().getAI().JudgeOnce();
             BF.getBseo().judgeOnce(BF.getMyHero(), BF.getTheMob());
+            BSEO.judgeOnce(BF.getMyHero(), BF.getTheMob());
             updata();
         }
         public void updata(){
@@ -61,15 +65,44 @@ namespace myRougelikeGame
                 WinBtn.Visible = true;
                 return;
             }
+            if (BSEO.getIsEnemySeeHero())
+                enemyVisable.Text = "是";
+            else
+                enemyVisable.Text = "否";
+            if (BSEO.getIsHeroSeeEnemy())
+            {
+                heroVisable.Text = "是";
+                hero_search.Visible = false;
+                enemyName.Text = BF.getTheMob().getMob_Name();
+                enemyLevel.Text = BF.getTheMob().getMob_Level() + "";
+            }
+            else
+            {
+                heroVisable.Text = "否";
+                hero_search.Visible = true;
+                enemyName.Text = "???";
+                enemyLevel.Text = "???";
+                
+            }
             Distence.Text = BF.getDistence() + "";
             enemyLastAction.Text = BF.getEnemyLastMove();
             heroLastAction.Text = BF.getHeroLastMove();
             if (BF.getDistence() > 3)
             {
+                attack_aimless.Visible = false;
                 attackBtn.Visible = false;
             }
             else {
-                attackBtn.Visible = true;
+                if (BSEO.getIsHeroSeeEnemy())
+                {
+                    attackBtn.Visible = true;
+                    attack_aimless.Visible = false;
+                }
+                else {
+                    attackBtn.Visible = false;
+                    attack_aimless.Visible = true;
+                }
+                
                }  
         }
 
@@ -175,6 +208,33 @@ namespace myRougelikeGame
             else
             {
                 weapon.Text = "无";
+            }
+        }
+
+        private void hero_search_Click(object sender, EventArgs e)
+        {
+            BSEO.heroSearchEnemy(BF.getMyHero(),BF.getDistence());
+            EndTurn();
+        }
+
+        private void attack_aimless_Click(object sender, EventArgs e)
+        {
+            if (dr.startBet(1, 7))
+            {
+                if (radioButton1.Checked)
+                    HeroAttackAction.AttackEnemy(BF.getMyHero(), BF.getTheMob(), 1);
+                else if (radioButton2.Checked)
+                    HeroAttackAction.AttackEnemy(BF.getMyHero(), BF.getTheMob(), 2);
+                else if (radioButton3.Checked)
+                    HeroAttackAction.AttackEnemy(BF.getMyHero(), BF.getTheMob(), 5);
+                BF.setHeroLastMove("乱打");
+                BSEO.setIsHeroSeeEnemy(true);
+                EndTurn();
+            }
+            else{
+                this.BattleMsg.Items.Add("你没打中什么");
+                BF.setHeroLastMove("乱打");
+                EndTurn();
             }
         }
     }

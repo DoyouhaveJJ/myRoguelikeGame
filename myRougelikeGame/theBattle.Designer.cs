@@ -61,6 +61,8 @@
             this.enemyLevel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.weapon = new System.Windows.Forms.Label();
+            this.hero_search = new System.Windows.Forms.Button();
+            this.attack_aimless = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -401,11 +403,33 @@
             this.weapon.Text = "label9";
             this.weapon.Click += new System.EventHandler(this.heroStatus_Click);
             // 
+            // hero_search
+            // 
+            this.hero_search.Location = new System.Drawing.Point(23, 246);
+            this.hero_search.Name = "hero_search";
+            this.hero_search.Size = new System.Drawing.Size(63, 23);
+            this.hero_search.TabIndex = 12;
+            this.hero_search.Text = "寻找";
+            this.hero_search.UseVisualStyleBackColor = true;
+            this.hero_search.Click += new System.EventHandler(this.hero_search_Click);
+            // 
+            // attack_aimless
+            // 
+            this.attack_aimless.Location = new System.Drawing.Point(90, 246);
+            this.attack_aimless.Name = "attack_aimless";
+            this.attack_aimless.Size = new System.Drawing.Size(63, 23);
+            this.attack_aimless.TabIndex = 13;
+            this.attack_aimless.Text = "乱打";
+            this.attack_aimless.UseVisualStyleBackColor = true;
+            this.attack_aimless.Click += new System.EventHandler(this.attack_aimless_Click);
+            // 
             // theBattle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 332);
+            this.Controls.Add(this.attack_aimless);
+            this.Controls.Add(this.hero_search);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -482,5 +506,7 @@
         private System.Windows.Forms.Label enemyLevel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label weapon;
+        private System.Windows.Forms.Button hero_search;
+        private System.Windows.Forms.Button attack_aimless;
     }
 }

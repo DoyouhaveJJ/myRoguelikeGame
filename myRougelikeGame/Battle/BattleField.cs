@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using myRougelikeGame.Player;
 using myRougelikeGame.Mob;
+using myRougelikeGame.Function;
 
 namespace myRougelikeGame.Battle
 {
@@ -15,13 +16,14 @@ namespace myRougelikeGame.Battle
         private string HeroLastMove;
         private theHero myHero;
         private defaultMob theMob;
+        private DIYRandom dr = new DIYRandom();
         public BattleField() {
             bseo.init();
         }
 
 
         public void clearBattle(){
-            setDistence(20);
+            setDistence(dr.getRandomNum(2,30));
             setEnemyLastMove("");
             setHeroLastMove("");
             setMyHero(null);

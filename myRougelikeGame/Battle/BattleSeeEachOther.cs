@@ -16,15 +16,34 @@ namespace myRougelikeGame.Battle
         private bool isEnemySeeHero;
         private DIYRandom dr = new DIYRandom();
         public void judgeOnce(theHero hero,defaultMob enemy){
-            if (dr.startBet(1000-hero.getHero_eye(), hero.getHero_eye()+1000))//看见了
+            if (!getIsHeroSeeEnemy())//英雄若没看到敌人，则要判断
             {
-                setIsHeroSeeEnemy(true);
+                if (dr.startBet(1000 - hero.getHero_eye(), hero.getHero_eye() + 1000))//看见了
+                {
+                    setIsHeroSeeEnemy(true);//英雄看到敌人
+                }
             }
-            if(dr.startBet(200-hero.getHero_agility(),250)){
-                setIsEnemySeeHero(true);
+            if (!getIsEnemySeeHero())//若敌人没看到英雄，则判断
+            {
+                if (dr.startBet(200 - hero.getHero_agility(), 200 + hero.getHero_agility()))
+                {
+                    setIsEnemySeeHero(true);//敌人看到英雄 英雄敏捷越高，越不容易看到
+                }
             }
         }
-
+        public bool heroSearchEnemy(theHero hero,int distince)
+        {
+            if (distince == 0) {
+                return true;
+            }
+            if (dr.startBet(distince+1,2*distince))//看见了
+            {
+                setIsHeroSeeEnemy(true);//英雄看到敌人
+                return true;
+            }
+            else
+                return false;     
+        }
         public void init() {
             setIsEnemySeeHero(false);
             setIsEnemySeeHero(false);
