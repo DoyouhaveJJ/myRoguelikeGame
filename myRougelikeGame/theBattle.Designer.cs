@@ -63,6 +63,8 @@
             this.weapon = new System.Windows.Forms.Label();
             this.hero_search = new System.Windows.Forms.Button();
             this.attack_aimless = new System.Windows.Forms.Button();
+            this.after = new System.Windows.Forms.Button();
+            this.before = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -423,11 +425,33 @@
             this.attack_aimless.UseVisualStyleBackColor = true;
             this.attack_aimless.Click += new System.EventHandler(this.attack_aimless_Click);
             // 
+            // after
+            // 
+            this.after.Location = new System.Drawing.Point(548, 123);
+            this.after.Name = "after";
+            this.after.Size = new System.Drawing.Size(53, 23);
+            this.after.TabIndex = 14;
+            this.after.Text = "下一个敌人";
+            this.after.UseVisualStyleBackColor = true;
+            this.after.Click += new System.EventHandler(this.after_Click);
+            // 
+            // before
+            // 
+            this.before.Location = new System.Drawing.Point(492, 123);
+            this.before.Name = "before";
+            this.before.Size = new System.Drawing.Size(53, 23);
+            this.before.TabIndex = 15;
+            this.before.Text = "上一个";
+            this.before.UseVisualStyleBackColor = true;
+            this.before.Click += new System.EventHandler(this.before_Click);
+            // 
             // theBattle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 332);
+            this.Controls.Add(this.before);
+            this.Controls.Add(this.after);
             this.Controls.Add(this.attack_aimless);
             this.Controls.Add(this.hero_search);
             this.Controls.Add(this.radioButton3);
@@ -508,5 +532,7 @@
         private System.Windows.Forms.Label weapon;
         private System.Windows.Forms.Button hero_search;
         private System.Windows.Forms.Button attack_aimless;
+        private System.Windows.Forms.Button after;
+        private System.Windows.Forms.Button before;
     }
 }

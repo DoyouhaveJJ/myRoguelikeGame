@@ -12,6 +12,7 @@ namespace myRougelikeGame.Map.block
             setName("湖泊");
             setType(3);
             setBlockLoot(new lakeLoot());
+            setMob_Count(0);
             getBlockLoot().initItemID_canLoot();
             getBlockLoot().initItemID_lootRate();
             getBlockLoot().setTheBlock(this);

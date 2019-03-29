@@ -104,51 +104,6 @@ namespace myRougelikeGame.Player
             
             HDI.DestoryAnItem(owner,item,itemArray);
             updata(owner);
-            /*
-            int i = itemArray.IndexOf(item);
-            itemArray.RemoveAt(i);
-            if (item.getIsEquited()) {
-                switch (item.getType()) {
-                    case 2: {
-                        if (owner.getHero_LeftHand().getTakeInHand() == item)
-                        {
-                            owner.getHero_LeftHand().setTakeInHand(null);
-                            owner.getHero_LeftHand().setIsEquipedSomething(false);
-                        }
-                        else
-                        {
-                            owner.getHero_RightHand().setTakeInHand(null);
-                            owner.getHero_RightHand().setIsEquipedSomething(false);
-                        }
-                        break;
-                    }
-                    case 3: {
-                        if (owner.getHero_LeftHand().getTakeInHand() == item)
-                        {
-                            owner.getHero_LeftHand().setTakeInHand(null);
-                            owner.getHero_LeftHand().setIsEquipedSomething(false);
-                        }
-                        else
-                        {
-                            owner.getHero_RightHand().setTakeInHand(null);
-                            owner.getHero_RightHand().setIsEquipedSomething(false);
-                        }
-                        break;
-                    }
-                    case 4: {
-                        if (owner.getHero_LeftHand().getTakeInHand() == item && owner.getHero_RightHand().getTakeInHand() == item)
-                        {
-                            owner.getHero_LeftHand().setTakeInHand(null);
-                            owner.getHero_LeftHand().setIsEquipedSomething(false);
-                            owner.getHero_RightHand().setTakeInHand(null);
-                            owner.getHero_RightHand().setIsEquipedSomething(false);
-                        }
-                        break;
-                    }
-                
-                }
-                
-            }*/
         }
 
         public void checkItems() {

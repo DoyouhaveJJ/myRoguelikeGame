@@ -130,7 +130,7 @@ namespace myRougelikeGame.Action
         }
         public int AttackByLeftHandByMagic(theHero myHero)
         {
-            if (myHero.isOutOfEnergy(1)) return 0;
+            if (myHero.isOutOfEnergy(1)) { getMessageBox().Items.Add("没有多余的精力来攻击了！"); return 0; }
             int magicDamage;
             if (myHero.getHero_LeftHand().getIsEquipedSomething())
             {
@@ -196,7 +196,7 @@ namespace myRougelikeGame.Action
         }
         public int AttackByRightHand(theHero myHero)
         {
-            if (myHero.isOutOfEnergy(1)) return 0;
+            if (myHero.isOutOfEnergy(1)) { getMessageBox().Items.Add("没有多余的精力来攻击了！"); return 0; }
             int Damage;
             if (myHero.getHero_RightHand().getIsEquipedSomething())
             {
@@ -263,7 +263,7 @@ namespace myRougelikeGame.Action
         }
         public int AttackByRightHandByMagic(theHero myHero)
         {
-            if (myHero.isOutOfEnergy(1)) return 0;
+            if (myHero.isOutOfEnergy(1)) { getMessageBox().Items.Add("没有多余的精力来攻击了！"); return 0; }
             int magicDamage;
             if (myHero.getHero_RightHand().getIsEquipedSomething())
             {
@@ -328,7 +328,7 @@ namespace myRougelikeGame.Action
 
         }
         public int AttackByBothHand(theHero myHero) {
-            if (myHero.isOutOfEnergy(1)) return 0;
+            if (myHero.isOutOfEnergy(1)) { getMessageBox().Items.Add("没有多余的精力来攻击了！"); return 0; }
             int Damage = 0;
             if (myHero.getHero_LeftHand().getIsEquipedSomething() && myHero.getHero_RightHand().getIsEquipedSomething())
             {
@@ -370,7 +370,7 @@ namespace myRougelikeGame.Action
         }
         public int AttackByBothHandByMagic(theHero myHero)
         {
-            if (myHero.isOutOfEnergy(1)) return 0;
+            if (myHero.isOutOfEnergy(1)) { getMessageBox().Items.Add("没有多余的精力来攻击了！"); return 0; }
             int magicDamage = 0;
             if (myHero.getHero_LeftHand().getIsEquipedSomething() && myHero.getHero_RightHand().getIsEquipedSomething())
             {

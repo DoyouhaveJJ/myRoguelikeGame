@@ -13,7 +13,15 @@ using myRougelikeGame.Help;
 namespace myRougelikeGame
 {
     public partial class setMyHero : Form
-    {
+    {   /**设置随机英雄界面
+         * 初始化变量
+         * tl为翻译，将数值化的属性翻译成字符串
+         * darn为自定义随机函数
+         * 设置最大随机次数 M=input-1
+         * 创建英雄。
+         * 
+         * 
+         * */
         Translate tl = new Translate();
         DIYRandom dran = new DIYRandom();
         int MaxRandomTimes = 4;
@@ -30,7 +38,7 @@ namespace myRougelikeGame
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {   //若没有输入名字，则不行
             if (hero_name.Text == "") {
                 MessageBox.Show("你的名字是？", "必须要有一个名字", MessageBoxButtons.OK);
                 return;
@@ -39,19 +47,20 @@ namespace myRougelikeGame
             button2.Visible = false;
             randomBtn.Visible = true;
             confirmBtn.Visible = true;
+            //确定一次则需要第一次随机生成
             RandomOnce();
             show();
             myHero.SetName(hero_name.Text);
         }
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-
+            //就决定是你了
             this.Tag = myHero;
             theGame tg = new theGame();
             tg.ShowDialog(this);
             this.Close();
         }
-
+        //随机生成
         void RandomOnce() {
             int[] baseNum = GetRandomInt(20, 1, 50); //随机生成的基数
             myHero.setHero_age(baseNum[0]*2);       //随机生成2~100岁
@@ -103,7 +112,7 @@ namespace myRougelikeGame
 
 
         void show() {
-            
+            //打印
             hero_age.Text = myHero.getHero_age().ToString()+"岁";
             hero_agility.Text = myHero.getHero_agility().ToString();
             hero_bloodtype.Text = tl.BloodTypeToString(myHero.getHero_bloodtype());
@@ -131,7 +140,7 @@ namespace myRougelikeGame
         // minNum随机数下限
         // maxNum随机数上限
         public int[] GetRandomInt(int Number, int minNum, int maxNum)
-        {
+        {   //获取随机数组
             int j,k;
             int[] b = new int[Number];
             Random r = new Random();
@@ -161,7 +170,7 @@ namespace myRougelikeGame
 
         private void randomBtn_Click(object sender, EventArgs e)
         {   
-            
+            //随机一次
             RandomOnce();
             show();
             
@@ -169,6 +178,7 @@ namespace myRougelikeGame
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //帮助按钮
             aboutHeroSetting ahs = new aboutHeroSetting();
             ahs.ShowDialog();
         }

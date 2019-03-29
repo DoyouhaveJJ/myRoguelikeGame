@@ -12,6 +12,7 @@ namespace myRougelikeGame.Map.block
             setName("平原");
             setType(1);
             setBlockLoot(new painLoot());
+            setMob_Count(0);
             getBlockLoot().initItemID_canLoot();
             getBlockLoot().initItemID_lootRate();
             getBlockLoot().setTheBlock(this);

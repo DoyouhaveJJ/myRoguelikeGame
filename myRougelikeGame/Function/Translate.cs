@@ -75,5 +75,17 @@ namespace myRougelikeGame.Function
             }
             return "";
         }
+
+        public string MobStatusToString(int a)
+        {
+            switch (a)
+            {
+                case 1: { return "正常"; }
+                case -1: { return "死亡"; }
+                   
+
+            }
+            return "";
+        }
     }
 }

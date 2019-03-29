@@ -11,7 +11,7 @@ namespace myRougelikeGame.Map.block
             setName("森林");
             setType(2);
             setBlockLoot(new forestLoot());
-
+            setMob_Count(0);
             getBlockLoot().initItemID_canLoot();
             getBlockLoot().initItemID_lootRate();
             getBlockLoot().setTheBlock(this);

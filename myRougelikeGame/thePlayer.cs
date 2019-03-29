@@ -14,6 +14,26 @@ namespace myRougelikeGame
 {
     public partial class thePlayer : Form
     {
+        /*  tl为翻译，翻译，翻译
+         *  这里是英雄的个人信息界面，大多数代码都是现实数据用的，所以说，看上去很多，其实都是辣鸡代码
+         * 
+         *  TODO:
+         *          实现“英雄身着的衣服会改变部位防御力”的功能
+         *          实现“衣服给技能”的功能
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * */
         Translate tl = new Translate();
         public thePlayer()
         {

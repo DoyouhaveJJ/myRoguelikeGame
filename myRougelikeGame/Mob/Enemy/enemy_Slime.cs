@@ -19,6 +19,8 @@ namespace myRougelikeGame.Mob.Enemy
             setMob_Defense(1);
             setMob_magicDefense(1);
             setMob_Hp(30);
+            setMob_Status(1);
+            setIsFirstDead(true);
             initTheMob();
             setAI(new easyBattleAI());
             getAI().setDistenceCanAttack(2);

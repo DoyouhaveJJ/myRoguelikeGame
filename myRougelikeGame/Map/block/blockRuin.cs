@@ -12,6 +12,7 @@ namespace myRougelikeGame.Map.block
             setName("废墟");
             setType(5);
             setBlockLoot(new ruinLoot());
+            setMob_Count(0);
             getBlockLoot().initItemID_canLoot();
             getBlockLoot().initItemID_lootRate();
             getBlockLoot().setTheBlock(this);

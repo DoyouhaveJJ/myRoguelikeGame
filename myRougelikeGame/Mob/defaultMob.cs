@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using myRougelikeGame.AI;
+using myRougelikeGame.Map;
 namespace myRougelikeGame.Mob
 {
     class defaultMob
@@ -13,6 +14,7 @@ namespace myRougelikeGame.Mob
         private string mob_Name;
         private int mob_ID;
         private int mob_Type;//1=敌人
+        private int mob_Status;//1=live -1=dead
         private string mob_Describe;
         private int mob_Level;
         private int mob_Damage;
@@ -21,6 +23,8 @@ namespace myRougelikeGame.Mob
         private int mob_magicDefense;
         private int mob_Hp;
         private int mob_AttackDistence;
+        private defaultBlock mob_location;
+        private bool isFirstDead;
 
         //等级有关
         private int mob_Hp_Increase;
@@ -46,7 +50,10 @@ namespace myRougelikeGame.Mob
                 setMob_magicDefense(getMob_magicDefense() + getRandomNum(1, getMob_magicDefense_Increase()));
             }
         }
-
+        private void Dead()
+        {
+            setMob_Status(-1);
+        }
         public int getRandomNum(int a, int b)
         {
             return randomNum.Next(a, b + 1);
@@ -55,7 +62,14 @@ namespace myRougelikeGame.Mob
 
 
         public bool isDead() {
-            return getMob_Hp() <= 0;
+            if (getMob_Hp() <= 0) {
+                Dead();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public string getMob_Name()
@@ -199,6 +213,38 @@ namespace myRougelikeGame.Mob
         {
             AI = aI;
         }
+
+
+        public defaultBlock getMob_location()
+        {
+            return mob_location;
+        }
+
+        public void setMob_location(defaultBlock mob_location)
+        {
+            this.mob_location = mob_location;
+        }
+        public int getMob_Status()
+        {
+            return mob_Status;
+        }
+
+        public void setMob_Status(int mob_Status)
+        {
+            this.mob_Status = mob_Status;
+        }
+
+
+        public bool getIsFirstDead()
+        {
+            return isFirstDead;
+        }
+
+        public void setIsFirstDead(bool isFirstDead)
+        {
+            this.isFirstDead = isFirstDead;
+        }
+
 
 
     }

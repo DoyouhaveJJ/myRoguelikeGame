@@ -13,18 +13,26 @@ namespace myRougelikeGame.AI
         public easyBattleAI(){}
         public override void JudgeOnce()
         {
-            setDistenceNow(getBf().getDistence());
             base.JudgeOnce();
-            if (getDistenceNow() <= getDistenceCanAttack())
+            setDistenceNow((int)getBf().getDistence()[(getBf().getTheMobList().IndexOf(getMyself()))]);
+            if (!getBf().getBseo().getIsEnemySeeHero())
             {
-                Attack(getHero());
+                Search();
             }
-            else if (getMyself().getMob_Hp() < 9)
+            else
             {
-                Escape();
-            }
-            else {
-                Move();
+                if (getDistenceNow() <= getDistenceCanAttack())
+                {
+                    Attack(getHero());
+                }
+                else if (getMyself().getMob_Hp() < 9)
+                {
+                    Escape();
+                }
+                else
+                {
+                    Move();
+                }
             }
         }
         public override void Attack(theHero Hero)
@@ -44,14 +52,22 @@ namespace myRougelikeGame.AI
         public override void Escape()
         {
             base.Escape();
-            getBf().setDistence(getBf().getDistence() + 1);
+            getBf().getDistence()[(getBf().getTheMobList().IndexOf(getMyself()))]=((int)getBf().getDistence()[(getBf().getTheMobList().IndexOf(getMyself()))] + 1);
             getBf().setEnemyLastMove("逃跑");
         }
         public override void Move()
         {
             base.Move();
-            getBf().setDistence(getBf().getDistence() - 1);
+            getBf().getDistence()[(getBf().getTheMobList().IndexOf(getMyself()))] = ((int)getBf().getDistence()[(getBf().getTheMobList().IndexOf(getMyself()))] - 1);
             getBf().setEnemyLastMove("前进");
+        }
+        public override void Search()
+        {
+            base.Search();
+            if(getDr().startBet(1,4)){
+                getBf().getBseo().setIsEnemySeeHero(true);
+            }
+            getBf().setEnemyLastMove("观察");
         }
 
 

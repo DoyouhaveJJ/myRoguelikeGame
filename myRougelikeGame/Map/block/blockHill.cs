@@ -12,6 +12,7 @@ namespace myRougelikeGame.Map.block
             setName("山地");
             setType(4);
             setBlockLoot(new hillLoot());
+            setMob_Count(0);
             getBlockLoot().initItemID_canLoot();
             getBlockLoot().initItemID_lootRate();
             getBlockLoot().setTheBlock(this);

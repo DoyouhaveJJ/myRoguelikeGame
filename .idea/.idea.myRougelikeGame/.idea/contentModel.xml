@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="myRougelikeGame" t="IncludeRecursive">
+        <e p="Action" t="Include">
+          <e p="AddItem.cs" t="Include" />
+          <e p="EnemyAttack.cs" t="Include" />
+          <e p="HeroAttack.cs" t="Include" />
+          <e p="HeroDestoryItem.cs" t="Include" />
+          <e p="HeroEquip.cs" t="Include" />
+          <e p="HeroLevelUp.cs" t="Include" />
+          <e p="HeroLoot.cs" t="Include" />
+          <e p="HeroPickItems.cs" t="Include" />
+          <e p="Judge.cs" t="Include" />
+          <e p="MeetEnemy.cs" t="Include" />
+          <e p="randomInitEnemy.cs" t="Include" />
+        </e>
+        <e p="AI" t="Include">
+          <e p="defaultAI.cs" t="Include" />
+          <e p="easyBattleAI.cs" t="Include" />
+        </e>
+        <e p="Battle" t="Include">
+          <e p="BattleField.cs" t="Include" />
+          <e p="BattleSeeEachOther.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="Function" t="Include">
+          <e p="blockRandom.cs" t="Include" />
+          <e p="DIYRandom.cs" t="Include" />
+          <e p="Translate.cs" t="Include" />
+        </e>
+        <e p="Help" t="Include">
+          <e p="AboutHeroSetting.cs" t="Include" />
+          <e p="AboutHeroSetting.Designer.cs" t="Include" />
+          <e p="AboutHeroSetting.resx" t="Include" />
+          <e p="HelpItem.cs" t="Include" />
+          <e p="HelpItem.Designer.cs" t="Include" />
+          <e p="HelpItem.resx" t="Include" />
+        </e>
+        <e p="Items" t="Include">
+          <e p="defaultItem.cs" t="Include" />
+          <e p="Food" t="Include">
+            <e p="food_Apple.cs" t="Include" />
+            <e p="food_rawWater.cs" t="Include" />
+          </e>
+          <e p="Weapon" t="Include">
+            <e p="weapon_LongStick.cs" t="Include" />
+            <e p="weapon_Stick.cs" t="Include" />
+          </e>
+          <e p="Wearable" t="Include">
+            <e p="BagForHand" t="Include">
+              <e p="bagforhand_PlasticBag.cs" t="Include" />
+            </e>
+            <e p="Belts" t="Include">
+              <e p="belt_WovenBelt.cs" t="Include" />
+            </e>
+            <e p="Clothes" t="Include">
+              <e p="clothes_SackCloth.cs" t="Include" />
+            </e>
+            <e p="Earplugs" t="Include">
+              <e p="earplug_Runner.cs" t="Include" />
+            </e>
+            <e p="Glasses" t="Include">
+              <e p="glass_NoGlass.cs" t="Include" />
+            </e>
+            <e p="Gloves" t="Include">
+              <e p="glove_CottonGlove.cs" t="Include" />
+            </e>
+            <e p="Hats" t="Include">
+              <e p="hat_GreenHat.cs" t="Include" />
+            </e>
+            <e p="Masks" t="Include">
+              <e p="mask_CheapMask.cs" t="Include" />
+            </e>
+            <e p="NeckLace" t="Include">
+              <e p="necklace_PlasticNeckLace.cs" t="Include" />
+            </e>
+            <e p="Packback" t="Include">
+              <e p="backpack_KidBackPack.cs" t="Include" />
+            </e>
+            <e p="Pants" t="Include">
+              <e p="pants_BadPants.cs" t="Include" />
+            </e>
+            <e p="Pocked" t="Include">
+              <e p="pocked_SmallPocked.cs" t="Include" />
+            </e>
+            <e p="Rings" t="Include">
+              <e p="ring_ToyRing.cs" t="Include" />
+            </e>
+            <e p="Shoes" t="Include">
+              <e p="shoes_Slippers.cs" t="Include" />
+            </e>
+            <e p="SignsForArm" t="Include">
+              <e p="signforarm_NameBrand.cs" t="Include" />
+            </e>
+            <e p="SignsForChest" t="Include">
+              <e p="signforchest_MarkSign.cs" t="Include" />
+            </e>
+            <e p="Stocks" t="Include">
+              <e p="stock_WarmStock.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Loot" t="Include">
+          <e p="defaultLoot.cs" t="Include" />
+          <e p="forestLoot.cs" t="Include" />
+          <e p="hillLoot.cs" t="Include" />
+          <e p="lakeLoot.cs" t="Include" />
+          <e p="painLoot.cs" t="Include" />
+          <e p="ruinLoot.cs" t="Include" />
+        </e>
+        <e p="Map" t="Include">
+          <e p="block" t="Include">
+            <e p="blockForest.cs" t="Include" />
+            <e p="blockHill.cs" t="Include" />
+            <e p="blockLake.cs" t="Include" />
+            <e p="blockPain.cs" t="Include" />
+            <e p="blockRuin.cs" t="Include" />
+          </e>
+          <e p="block.cs" t="Include" />
+          <e p="defaultBlock.cs" t="Include" />
+          <e p="world.cs" t="Include" />
+        </e>
+        <e p="Mob" t="Include">
+          <e p="defaultMob.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="enemy_Goblin.cs" t="Include" />
+            <e p="enemy_Slime.cs" t="Include" />
+          </e>
+        </e>
+        <e p="myRougelikeGame.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Player" t="Include">
+          <e p="Bag.cs" t="Include" />
+          <e p="Body" t="Include">
+            <e p="Chest.cs" t="Include" />
+            <e p="Head.cs" t="Include" />
+            <e p="LeftArm.cs" t="Include" />
+            <e p="LeftFoot.cs" t="Include" />
+            <e p="LeftHand.cs" t="Include" />
+            <e p="LeftLeg.cs" t="Include" />
+            <e p="Neck.cs" t="Include" />
+            <e p="RightArm.cs" t="Include" />
+            <e p="RightFoot.cs" t="Include" />
+            <e p="RightHand.cs" t="Include" />
+            <e p="RightLeg.cs" t="Include" />
+            <e p="Web.cs" t="Include" />
+          </e>
+          <e p="man.cs" t="Include" />
+          <e p="theHero.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="DataSources" t="Include">
+            <e p="block.datasource" t="Include" />
+            <e p="Form1.datasource" t="Include" />
+            <e p="myRougelikeGame.Function.blockRandom.datasource" t="Include" />
+            <e p="myRougelikeGame.Function.DIYRandom.datasource" t="Include" />
+            <e p="myRougelikeGame.Function.Translate.datasource" t="Include" />
+            <e p="myRougelikeGame.Help.aboutHeroSetting.datasource" t="Include" />
+            <e p="myRougelikeGame.Items.defaultItem.datasource" t="Include" />
+            <e p="myRougelikeGame.Items.Food.food_Apple.datasource" t="Include" />
+            <e p="myRougelikeGame.Items.Food.food_rawWater.datasource" t="Include" />
+            <e p="myRougelikeGame.Map.world.datasource" t="Include" />
+            <e p="myRougelikeGame.Player.Bag.datasource" t="Include" />
+            <e p="myRougelikeGame.Player.man.datasource" t="Include" />
+            <e p="myRougelikeGame.Player.theHero.datasource" t="Include" />
+            <e p="myRougelikeGame.Properties.Resources.datasource" t="Include" />
+            <e p="myRougelikeGame.Properties.Settings.datasource" t="Include" />
+            <e p="Program.datasource" t="Include" />
+            <e p="setMyHero.datasource" t="Include" />
+            <e p="theBag.datasource" t="Include" />
+            <e p="theGame.datasource" t="Include" />
+            <e p="thePlayer.datasource" t="Include" />
+          </e>
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="setMyHero.cs" t="Include" />
+        <e p="setMyHero.Designer.cs" t="Include" />
+        <e p="setMyHero.resx" t="Include" />
+        <e p="SmallForm" t="Include">
+          <e p="theChest.cs" t="Include" />
+          <e p="theChest.Designer.cs" t="Include" />
+          <e p="theChest.resx" t="Include" />
+          <e p="theHead.cs" t="Include" />
+          <e p="theHead.Designer.cs" t="Include" />
+          <e p="theHead.resx" t="Include" />
+          <e p="theLeftArm.cs" t="Include" />
+          <e p="theLeftArm.Designer.cs" t="Include" />
+          <e p="theLeftArm.resx" t="Include" />
+          <e p="theLeftFoot.cs" t="Include" />
+          <e p="theLeftFoot.Designer.cs" t="Include" />
+          <e p="theLeftFoot.resx" t="Include" />
+          <e p="theLeftHand.cs" t="Include" />
+          <e p="theLeftHand.Designer.cs" t="Include" />
+          <e p="theLeftHand.resx" t="Include" />
+          <e p="theLeftLeg.cs" t="Include" />
+          <e p="theLeftLeg.Designer.cs" t="Include" />
+          <e p="theLeftLeg.resx" t="Include" />
+          <e p="theNeck.cs" t="Include" />
+          <e p="theNeck.Designer.cs" t="Include" />
+          <e p="theNeck.resx" t="Include" />
+          <e p="theRightArm.cs" t="Include" />
+          <e p="theRightArm.Designer.cs" t="Include" />
+          <e p="theRightArm.resx" t="Include" />
+          <e p="theRightFoot.cs" t="Include" />
+          <e p="theRightFoot.Designer.cs" t="Include" />
+          <e p="theRightFoot.resx" t="Include" />
+          <e p="theRightHand.cs" t="Include" />
+          <e p="theRightHand.Designer.cs" t="Include" />
+          <e p="theRightHand.resx" t="Include" />
+          <e p="theRightLeg.cs" t="Include" />
+          <e p="theRightLeg.Designer.cs" t="Include" />
+          <e p="theRightLeg.resx" t="Include" />
+          <e p="theWeb.cs" t="Include" />
+          <e p="theWeb.Designer.cs" t="Include" />
+          <e p="theWeb.resx" t="Include" />
+        </e>
+        <e p="TextFile1.txt" t="Include" />
+        <e p="theBag.cs" t="Include" />
+        <e p="theBag.Designer.cs" t="Include" />
+        <e p="theBag.resx" t="Include" />
+        <e p="theBattle.cs" t="Include" />
+        <e p="theBattle.Designer.cs" t="Include" />
+        <e p="theBattle.resx" t="Include" />
+        <e p="theBlock.cs" t="Include" />
+        <e p="theBlock.Designer.cs" t="Include" />
+        <e p="theBlock.resx" t="Include" />
+        <e p="theGame.cs" t="Include" />
+        <e p="theGame.Designer.cs" t="Include" />
+        <e p="theGame.resx" t="Include" />
+        <e p="theLoot.cs" t="Include" />
+        <e p="theLoot.Designer.cs" t="Include" />
+        <e p="theLoot.resx" t="Include" />
+        <e p="thePlayer.cs" t="Include" />
+        <e p="thePlayer.Designer.cs" t="Include" />
+        <e p="thePlayer.resx" t="Include" />
+      </e>
+      <e p="myRougelikeGame.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_myRougelikeGame.1560255218.00" t="ExcludeRecursive" />
+  </component>
+</project>

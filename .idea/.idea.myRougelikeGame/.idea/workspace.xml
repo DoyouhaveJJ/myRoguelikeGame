@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dfafdb2b-4e5d-4f97-b681-2294deac6427" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame.suo" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/AI/defaultAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/AI/defaultAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/AI/easyBattleAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/AI/easyBattleAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Action/HeroAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Action/HeroAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Action/MeetEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Action/MeetEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Battle/BattleField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Battle/BattleField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockForest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockForest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockHill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockHill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockLake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockLake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockPain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockPain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockRuin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Map/block/blockRuin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Map/defaultBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Map/defaultBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Mob/Enemy/enemy_Goblin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Mob/Enemy/enemy_Goblin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/Mob/defaultMob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/Mob/defaultMob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/bin/Debug/myRougelikeGame.exe" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/bin/Debug/myRougelikeGame.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/bin/Debug/myRougelikeGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/bin/Debug/myRougelikeGame.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/myRougelikeGame.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/myRougelikeGame.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/GenerateResource.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/GenerateResource.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/myRougelikeGame.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/myRougelikeGame.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/myRougelikeGame.exe" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/myRougelikeGame.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/myRougelikeGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/obj/x86/Debug/myRougelikeGame.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/theBattle.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/theBattle.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/theBattle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/theBattle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/theGame.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/theGame.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRougelikeGame/theGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/myRougelikeGame/theGame.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myRougelikeGame/Form1.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding>
+                <marker date="1551965644890" expanded="false" signature="6:183" ph="..." />
+                <marker date="1551965644890" expanded="true" signature="210:619" ph="{...}" />
+                <marker date="1551965644890" expanded="true" signature="250:617" ph="{...}" />
+                <marker date="1551965644890" expanded="true" signature="279:334" ph="{...}" />
+                <marker date="1551965644890" expanded="true" signature="397:418" ph="{...}" />
+                <marker date="1551965644890" expanded="true" signature="482:611" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myRougelikeGame/AI/defaultAI.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <marker date="1553738000028" expanded="false" signature="6:234" ph="..." />
+                <marker date="1553738000028" expanded="true" signature="264:2049" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="286:2047" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="800:852" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="904:963" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1005:1063" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1127:1198" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1231:1276" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1318:1363" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1396:1439" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1479:1525" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1562:1605" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1648:1689" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1727:1774" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1824:1873" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1909:1952" ph="{...}" />
+                <marker date="1553738000028" expanded="true" signature="1995:2041" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/myRougelikeGame/Form1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/myRougelikeGame/theBattle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/556A6BA2-C0A5-46F1-AD23-18C309CE0945/0e/81dd422d/Hwnd.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/myRougelikeGame/AI/defaultAI.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="140" />
+    <option name="y" value="43" />
+    <option name="width" value="1400" />
+    <option name="height" value="987" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="myRougelikeGame" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="myRougelikeGame" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="myRougelikeGame" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="myRougelikeGame" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/myRougelikeGame/bin/Debug/myRougelikeGame.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/myRougelikeGame/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/myRougelikeGame/myRougelikeGame.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.0,Profile=Client" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dfafdb2b-4e5d-4f97-b681-2294deac6427" name="Default Changelist" comment="" />
+      <created>1553817552295</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553817552295</updated>
+      <workItem from="1553817554919" duration="313000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="313000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="140" y="43" width="1400" height="987" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496318" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32960895" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Build" weight="0.32960895" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32960895" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/myRougelikeGame/theBattle.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+          <folding>
+            <marker date="1553745288912" expanded="false" signature="6:365" ph="..." />
+            <marker date="1553745288912" expanded="true" signature="392:10923" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="436:10921" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="844:899" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="979:1000" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="1064:1849" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="1382:1745" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="1879:2386" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="1973:2349" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="2424:5478" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="2493:2602" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="2674:3264" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="2720:2843" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="2938:3060" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="3144:3249" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="3332:4025" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="3736:3987" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="3851:3926" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="4245:4545" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="4562:4772" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="4975:5094" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="5094:5466" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="5159:5293" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="5293:5432" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="5521:5570" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="5637:5768" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="5837:5968" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="6033:6164" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="6230:6361" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="6427:7025" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="7089:7239" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="7302:7833" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="7396:7767" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="7900:7921" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="7958:7991" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="8069:8433" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="8118:8423" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="8198:8329" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="8329:8409" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="8511:8807" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="8597:8717" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="8734:8797" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="8885:9464" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="9032:9374" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="9391:9454" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="9532:9688" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="9759:10654" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="9804:10491" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="10491:10644" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="10717:10785" ph="{...}" />
+            <marker date="1553745288912" expanded="true" signature="10847:10915" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/556A6BA2-C0A5-46F1-AD23-18C309CE0945/0e/81dd422d/Hwnd.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="796" column="6" selection-start-line="796" selection-start-column="6" selection-end-line="796" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myRougelikeGame/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <marker date="1551965644890" expanded="false" signature="6:183" ph="..." />
+            <marker date="1551965644890" expanded="true" signature="210:619" ph="{...}" />
+            <marker date="1551965644890" expanded="true" signature="250:617" ph="{...}" />
+            <marker date="1551965644890" expanded="true" signature="279:334" ph="{...}" />
+            <marker date="1551965644890" expanded="true" signature="397:418" ph="{...}" />
+            <marker date="1551965644890" expanded="true" signature="482:611" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myRougelikeGame/AI/defaultAI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <marker date="1553738000028" expanded="false" signature="6:234" ph="..." />
+            <marker date="1553738000028" expanded="true" signature="264:2049" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="286:2047" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="800:852" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="904:963" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1005:1063" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1127:1198" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1231:1276" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1318:1363" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1396:1439" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1479:1525" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1562:1605" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1648:1689" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1727:1774" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1824:1873" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1909:1952" ph="{...}" />
+            <marker date="1553738000028" expanded="true" signature="1995:2041" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

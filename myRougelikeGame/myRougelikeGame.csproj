@@ -59,6 +59,7 @@
     <Compile Include="Action\HeroPickItems.cs" />
     <Compile Include="Action\Judge.cs" />
     <Compile Include="Action\MeetEnemy.cs" />
+    <Compile Include="Action\randomInitEnemy.cs" />
     <Compile Include="AI\defaultAI.cs" />
     <Compile Include="AI\easyBattleAI.cs" />
     <Compile Include="Battle\BattleField.cs" />

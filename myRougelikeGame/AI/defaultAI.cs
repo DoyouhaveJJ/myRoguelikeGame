@@ -24,7 +24,7 @@ namespace myRougelikeGame.AI
         virtual public void Move(){}
         virtual public void Attack(theHero Hero){}
         virtual public void Escape(){}
-
+        virtual public void Search() { }
 
 
         

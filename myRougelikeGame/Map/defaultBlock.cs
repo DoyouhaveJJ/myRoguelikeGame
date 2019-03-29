@@ -5,6 +5,7 @@ using System.Text;
 using System.Collections;
 using myRougelikeGame.Items;
 using myRougelikeGame.Loot;
+using myRougelikeGame.Mob;
 
 namespace myRougelikeGame.Map
 {
@@ -15,6 +16,19 @@ namespace myRougelikeGame.Map
         private int type;
         private ArrayList itemInGround = new ArrayList();
         private defaultLoot blockLoot;
+        private ArrayList mob_list = new ArrayList();
+        private int mob_Count;
+
+
+        public int getMob_Count()
+        {
+            return mob_Count;
+        }
+
+        public void setMob_Count(int mob_Count)
+        {
+            this.mob_Count = mob_Count;
+        }
 
 
         public ArrayList getItemInGround()
@@ -60,6 +74,20 @@ namespace myRougelikeGame.Map
         {
             this.type = type;
         }
+
+
+        public ArrayList getMob_list()
+        {
+            return mob_list;
+        }
+
+        public void setMob_list(ArrayList mob_list)
+        {
+            this.mob_list = mob_list;
+        }
+
+
+        
 
     }
 }

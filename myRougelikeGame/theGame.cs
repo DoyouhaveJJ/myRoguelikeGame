@@ -21,6 +21,31 @@ namespace myRougelikeGame
 {
     public partial class theGame : Form
     {
+        /*  主游戏界面
+         * HeroPickItemsAction是英雄拾取物品的动作，这里new一个，整个游戏就一个。后面的拾取只要作为引用传入即可
+         * ME为遇见敌人的动作，这里new一个，以后就不再new了
+         * BF为战场，只new一个
+         * myHero，这里new第二个，后面可能要用到最初的hero
+         * myWorld为世界，这里只new一个
+         * dr为随机数生成器，还能实现概率的功能
+         * AddItemAction为添加物品的动作，这里只new一个
+         * HeroAttackAction为英雄攻击的动作，这里只new一个，以后都作为引用传入
+         * TODO:
+         *      实现英雄更多的活动：撒尿拉屎吃饭等
+         *      实现更多的随机事件
+         *      实现市场系统
+         *      实现经济系统
+         *      实现天气系统
+         *      实现气温四季变化系统
+         *      实现大地图敌人随机生成和随机移动系统
+         *      实现合成系统
+         *      实现载具系统
+         *      实现敌人互相斗殴系统
+         *      实现昼夜交替系统
+         *      实现疾病系统
+         *      …………………………………………
+         * 
+         * */
         HeroPickItems HeroPickItemsAction = new HeroPickItems();
         MeetEnemy ME = new MeetEnemy();
         BattleField BF = new BattleField();
@@ -37,7 +62,6 @@ namespace myRougelikeGame
             myHero.setMessageBox(this.SystemMsg);
             AddItemAction.setMessageBox(this.SystemMsg);
             HeroAttackAction.setMessageBox(this.SystemMsg);
-            BF.clearBattle();
         }
 
         private void theGame_Load(object sender, EventArgs e)
@@ -46,35 +70,40 @@ namespace myRougelikeGame
             myHero = (theHero)this.Owner.Tag;
             this.Tag = myHero;
             myWorld.init();
+            //初始化英雄的数据
             this.myHero.setTheHeroMaxValue(true);
             this.myHero.rebuildTheHero();
             this.myHero.buildConsumeIndex();
             this.myHero.buildBodyIndex();
             this.myHero.initBodyIndex();
-
+            //更新地图
             updata();
             updataMap();
+            //初始化背包
             myHero.getHeroBag().setOwner(myHero);
+            //设置消息栏
             myHero.setMessageBox(this.SystemMsg);
+            //背包初始化
             myHero.getHeroBag().updata(myHero);
             
            //myWorld.showWorld();
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   //辣鸡代码
             myHero.gainExp(200);
             updata();
         }
 
         void updata() {
-
+            //更新数据 辣鸡代码
             Exp.Text = myHero.getExp().ToString();
             maxExp.Text = myHero.getMaxExp().ToString();
             Level.Text = myHero.getLevel().ToString();
         
         }
         void updataMap() {
+            //更新地图,以3,3点为中心，英雄移动会影响各个区域
             int x = myHero.getLoc_x();
             int y = myHero.getLoc_y();
             locationLabel.Text = x + "," + y;
@@ -112,8 +141,8 @@ namespace myRougelikeGame
 
 
         }
-
-
+        //一下一大堆代码，就是更新函数
+        
         void updataBlock1_1(int x, int y) {
             if (x < 0 || y < 0 || x > 399 || y > 399) { block1_1.Text = "X"; return; }
             block1_1.Text = myWorld.showBlock(x,y);
@@ -392,11 +421,11 @@ namespace myRougelikeGame
 
         private void button12_Click(object sender, EventArgs e)
         {
-            ME.MeetAnEnemy(myHero,BF);
+            ME.MeetEnemyAtBlock(myHero,BF);
         }
 
         private void button13_Click(object sender, EventArgs e)
-        {
+        {   //生成“搜刮”窗口
             theLoot tl = new theLoot();
             tl.Tag = myHero.getStandBlock().getBlockLoot();
             myHero.getStandBlock().getBlockLoot().setAddItemAction(this.AddItemAction);
@@ -406,7 +435,7 @@ namespace myRougelikeGame
         }
 
         private void cheeckBlock_Click(object sender, EventArgs e)
-        {
+        {   //生成“检查地面”窗口
             theBlock tb = new theBlock();
             HeroPickItemsAction.setHero(myHero);
             HeroPickItemsAction.setTheBlock(myHero.getStandBlock());
@@ -419,6 +448,11 @@ namespace myRougelikeGame
 
         public System.Windows.Forms.ListBox getSystemMsg() {
             return this.SystemMsg;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {   //“测试敌人”
+            ME.initEnemyAtBlock(myHero.getStandBlock(),1);
         }
         
             

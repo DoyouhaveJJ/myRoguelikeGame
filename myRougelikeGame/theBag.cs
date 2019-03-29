@@ -22,6 +22,22 @@ namespace myRougelikeGame
         {
             InitializeComponent();
         }
+        /*  HE为英雄穿装备的动作
+         *  tl为翻译
+         *  selectedItem为当前选中的物品
+         *  owner为英雄
+         *  Bag为英雄的背包
+         *  MessageBoxShow为输出信息的窗口
+         * 
+         * 
+         * TODO:实现物品整理功能
+         *      实现物品丢弃功能  
+         *      实现物品自由排序功能    
+         *      实现物品拖拽排序功能
+         * 
+         * 
+         * 
+         * */
         HeroEquip HE = new HeroEquip();
         Translate tl = new Translate();
         defaultItem selectedItem;
@@ -43,6 +59,8 @@ namespace myRougelikeGame
             owner = (theHero)this.Tag;
             heroBag = owner.getHeroBag();
             heroBag.setOwner(owner);
+            //此时向listBox2中填入物品数据，listBox1中填入物品名
+            //listBox1中的物品名是供用户观看的，真正的操作是在listBox2中运行的
             for(int i=0;i<heroBag.getItemArrayCount();i++){
                 listBox2.Items.Add(heroBag.getItemByIndex(i));
                 listBox1.Items.Add(heroBag.getItemByIndex(i).getName());
@@ -52,7 +70,7 @@ namespace myRougelikeGame
             
             
         }
-
+        //更新函数，主要是对窗口显示，按钮显示
         public void updata() {
             listBox1.Items.Clear();
             listBox2.Items.Clear();
@@ -73,12 +91,13 @@ namespace myRougelikeGame
         }
    
 
-
+        //当选择的物品改变
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.listBox1.SelectedItems.Count > 0)
             {
-                //获取选中的值
+                //获取选中的物品，根据物品的特性选择显示按钮
+                //TODO 代码量太大，可以实现简单的函数来控制按钮的显示与否
                 int index = this.listBox1.SelectedIndex;
 
                 selectedItem = (defaultItem)listBox2.Items[index];
@@ -117,7 +136,7 @@ namespace myRougelikeGame
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //隐藏表
         }
 
         private void UseButton_Click(object sender, EventArgs e)
@@ -125,7 +144,7 @@ namespace myRougelikeGame
             selectedItem.UseItem(owner);
             updata();
         }
-
+        //显示数据
         private void showItemInfo(defaultItem item) {
             itemName.Text = item.getName();
             itemLevel.Text = item.getLevel() + "级";
@@ -148,139 +167,8 @@ namespace myRougelikeGame
 
         private void EquipButton_Click(object sender, EventArgs e)
         {
-            HE.HeroEquipItem(owner,selectedItem);
-            
+            HE.HeroEquipItem(owner, selectedItem);
             updata();
-         /*   if (selectedItem.getIsEquited())//已装备的话则卸下
-            {
-                selectedItem.setIsEquited(false);
-                switch (selectedItem.getType())
-                {
-                    case 2:
-                        {
-                            if (selectedItem == owner.getHero_LeftHand().getTakeInHand())
-                            {
-                                owner.getHero_LeftHand().setIsEquipedSomething(false);
-                                owner.getHero_LeftHand().setTakeInHand(null);
-                            }
-                            else
-                            {
-                                owner.getHero_RightHand().setIsEquipedSomething(false);
-                                owner.getHero_RightHand().setTakeInHand(null);
-                            }
-                            break;
-                        }
-                    case 3:
-                        {
-                            if (selectedItem == owner.getHero_LeftHand().getTakeInHand())
-                            {
-                                owner.getHero_LeftHand().setIsEquipedSomething(false);
-                                owner.getHero_LeftHand().setTakeInHand(null);
-                            }
-                            else
-                            {
-                                owner.getHero_RightHand().setIsEquipedSomething(false);
-                                owner.getHero_RightHand().setTakeInHand(null);
-                            }
-                            break;
-                        }
-                    case 4:
-                        {
-                            if (owner.getHero_LeftHand().getTakeInHand() == selectedItem && owner.getHero_RightHand().getTakeInHand() == selectedItem)
-                            {
-                                owner.getHero_LeftHand().setIsEquipedSomething(false);
-                                owner.getHero_RightHand().setIsEquipedSomething(false);
-                                owner.getHero_LeftHand().setTakeInHand(null);
-                                owner.getHero_RightHand().setTakeInHand(null);
-                            }
-                            break;
-                        }
-                }
-            }
-            else
-            {
-                switch (selectedItem.getType()) {
-                    case 2: {
-                        if (MessageBox.Show("想用左手拿吗？不想左手拿就右手拿", "哪只手拿？", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                        {
-                            if (owner.getHero_LeftHand().getIsEquipedSomething())
-                            {
-                                MessageBox.Show("左手已经有东西了", "拿不了", MessageBoxButtons.OK);
-                                return;
-                            }
-                            else
-                            {
-                                owner.getHero_LeftHand().setIsEquipedSomething(true);
-                                owner.getHero_LeftHand().setTakeInHand(selectedItem);
-                            }
-                        }
-                        else
-                        {
-                            if (owner.getHero_RightHand().getIsEquipedSomething())
-                            {
-                                MessageBox.Show("右手已经有东西了", "拿不了", MessageBoxButtons.OK);
-                                return;
-                            }
-                            else
-                            {
-                                owner.getHero_RightHand().setIsEquipedSomething(true);
-                                owner.getHero_RightHand().setTakeInHand(selectedItem);
-                            }
-                        }
-                        break;
-                    }
-
-                    case 3:
-                        {
-                            if (MessageBox.Show("想用左手拿吗？不想左手拿就右手拿", "哪只手拿？", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                            {
-                                if (owner.getHero_LeftHand().getIsEquipedSomething())
-                                {
-                                    MessageBox.Show("左手已经有东西了", "拿不了", MessageBoxButtons.OK);
-                                    return;
-                                }
-                                else
-                                {
-                                    owner.getHero_LeftHand().setIsEquipedSomething(true);
-                                    owner.getHero_LeftHand().setTakeInHand(selectedItem);
-                                }
-                            }
-                            else
-                            {
-                                if (owner.getHero_RightHand().getIsEquipedSomething())
-                                {
-                                    MessageBox.Show("右手已经有东西了", "拿不了", MessageBoxButtons.OK);
-                                    return;
-                                }
-                                else
-                                {
-                                    owner.getHero_RightHand().setIsEquipedSomething(true);
-                                    owner.getHero_RightHand().setTakeInHand(selectedItem);
-                                }
-                            }
-                            break;
-                        }
-                    case 4: {
-                        if (owner.getHero_LeftHand().getIsEquipedSomething() || owner.getHero_RightHand().getIsEquipedSomething())
-                        {
-                            MessageBox.Show("这玩意儿必须双手拿", "拿不了", MessageBoxButtons.OK);
-                            return;
-                        }
-                        else
-                        {
-                            owner.getHero_LeftHand().setIsEquipedSomething(true);
-                            owner.getHero_LeftHand().setTakeInHand(selectedItem);
-                            owner.getHero_RightHand().setIsEquipedSomething(true);
-                            owner.getHero_RightHand().setTakeInHand(selectedItem);
-                        }
-                        break;
-                    }
-                        //新的种类
-                }
-                selectedItem.setIsEquited(true);
-            }
-            selectedItem.updataQuality(); */
-            
         }
     }
 }

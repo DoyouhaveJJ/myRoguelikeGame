@@ -11,7 +11,7 @@ namespace myRougelikeGame.Mob.Enemy
         public enemy_Goblin()
         {
             setMob_Name("哥布林");
-            setMob_ID(1);
+            setMob_ID(2);
             setMob_Type(1);
             setMob_Describe("比史莱姆强一、");
             setMob_Level(getRandomNum(3, 6));
@@ -20,6 +20,8 @@ namespace myRougelikeGame.Mob.Enemy
             setMob_Defense(1);
             setMob_magicDefense(1);
             setMob_Hp(30);
+            setMob_Status(1);
+            setIsFirstDead(true);
             initTheMob();
             setAI(new easyBattleAI());
             getAI().setDistenceCanAttack(3);
