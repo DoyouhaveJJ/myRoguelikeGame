@@ -140,11 +140,6 @@ namespace myRougelikeGame.Player
 
 
 
-
-
-
-
-
         public double getBurdenNow()
         {
             return burdenNow;
