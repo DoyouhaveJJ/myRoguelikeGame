@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Action\AddItem.cs" />
+    <Compile Include="Action\AddMob.cs" />
     <Compile Include="Action\EnemyAttack.cs" />
     <Compile Include="Action\HeroAttack.cs" />
     <Compile Include="Action\HeroDestoryItem.cs" />

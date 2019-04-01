@@ -27,6 +27,10 @@ namespace myRougelikeGame.Player
             
         }
         public void addOneItem(defaultItem item) {
+            if (item == null)
+            {
+                return;
+            }
             if (isBurden(item)) {
                 owner.getMessageBox().Items.Add("超重啦，不能拿下" + item.getName() + "啦");
                 //System.Console.WriteLine("超重啦，不能拿下" + item.getName() + "啦");
@@ -38,7 +42,6 @@ namespace myRougelikeGame.Player
                 return;
             }
             itemArray.Add(item);
-
 
         }
         public void useOneItem(int i) {

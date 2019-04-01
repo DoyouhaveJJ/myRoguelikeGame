@@ -46,6 +46,7 @@ namespace myRougelikeGame
          *      …………………………………………
          * 
          * */
+        AddMob AddMobAction = new AddMob();
         HeroPickItems HeroPickItemsAction = new HeroPickItems();
         MeetEnemy ME = new MeetEnemy();
         BattleField BF = new BattleField();
@@ -61,6 +62,7 @@ namespace myRougelikeGame
             myHero.setLoc_y(0);
             myHero.setMessageBox(this.SystemMsg);
             AddItemAction.setMessageBox(this.SystemMsg);
+            AddMobAction.setMessageBox(this.SystemMsg);
             HeroAttackAction.setMessageBox(this.SystemMsg);
         }
 
@@ -85,9 +87,32 @@ namespace myRougelikeGame
             myHero.setMessageBox(this.SystemMsg);
             //背包初始化
             myHero.getHeroBag().updata(myHero);
-            
+            //敌人生成器初始化
+            AddMobAction.setMyHero(myHero);
+            AddMobAction.setMyWorld(myWorld);
            //myWorld.showWorld();
+
+
+
+
+
+            setTestMode(false);
+            
         }
+        private void setTestMode(bool a)
+        {
+
+            button4.Visible = a;
+            button5.Visible = a;
+            button7.Visible = a;
+            button9.Visible = a;
+            button10.Visible = a;
+            button11.Visible = a;
+            button1.Visible = a;
+        }
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {   //辣鸡代码
@@ -366,7 +391,8 @@ namespace myRougelikeGame
 
         private void getItem_Click(object sender, EventArgs e)
         {
-            AddItemAction.AddOneItemByID(item_ID.Text, myHero);
+            myHero.addOneItem(AddItemAction.AddOneItemByID(int.Parse(item_ID.Text)));
+          //AddItemAction.AddOneItemByID(item_ID.Text, myHero);
             SystemMsg.SelectedIndex = SystemMsg.Items.Count - 1;
         }
 

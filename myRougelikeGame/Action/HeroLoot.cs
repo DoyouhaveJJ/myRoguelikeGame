@@ -20,7 +20,9 @@ namespace myRougelikeGame.Action
             
             for (int i = 0; i < loot.getItemID_canLoot().Count; i++) { 
                 if(dr.startBet((int)loot.getItemID_lootRate()[i]+loot.getLootIndex(),loot.getMaxLootIndex())){
-                    AddItemAction.AddOneItemByIDToBlock((int)loot.getItemID_canLoot()[i], loot.getTheBlock());
+                    //
+                    loot.getTheBlock().getItemInGround().Add(AddItemAction.AddOneItemByID((int)loot.getItemID_canLoot()[i]));
+                  //AddItemAction.AddOneItemByIDToBlock((int)loot.getItemID_canLoot()[i], loot.getTheBlock());
                     Thread.Sleep(10);
                     getLootMessage().Items.Add("你搜刮到了一个东西");
                     isLootSomething = true;
