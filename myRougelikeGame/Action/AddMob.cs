@@ -6,6 +6,7 @@ using myRougelikeGame.Map;
 using myRougelikeGame.Player;
 using myRougelikeGame.Mob;
 using myRougelikeGame.Mob.Enemy;
+using myRougelikeGame.Function;
 
 namespace myRougelikeGame.Action
 {
@@ -15,7 +16,7 @@ namespace myRougelikeGame.Action
         private theHero myHero;
         private world myWorld;
         private System.Windows.Forms.ListBox MessageBox;
-
+        private DIYRandom dr = new DIYRandom();
 
 
         public defaultMob InitMobByID(int ID)
@@ -36,7 +37,6 @@ namespace myRougelikeGame.Action
                 default:
                     {
                         return null;
-                    
                     }
 
                     
@@ -46,11 +46,27 @@ namespace myRougelikeGame.Action
 
 
 
-
-        public void AddAnMobOnRandomBlock()
+        //在英雄的 range*range周围生成怪物 随机的 index概率
+        public void AddAnMobOnRandomBlockNearbyHero(int range , int index , int maxIndex)
         {
-
-
+            int x, y;
+            int mob_ID;
+            x = getMyHero().getLoc_x();
+            y = getMyHero().getLoc_y();
+            for (int i = (((x - range) <= 0) ? 0 : x - range); i < (((x + range) >= 399) ? 399 : x + range); i++) 
+            {
+                for (int j = (((y - range) <= 0) ? 0 : y - range); j < (((y + range) >= 399) ? 399 : y + range); j++)
+                {
+                    if (dr.startBet(index, maxIndex))
+                    {
+                        mob_ID = dr.getRandomNum(1, 2);
+                        defaultMob newMob = InitMobByID(mob_ID);
+                        getMyWorld().getBlockByXY(i, j).getMob_list().Add(newMob);
+                        getMyWorld().getBlockByXY(i, j).setMob_Count(getMyWorld().getBlockByXY(i, j).getMob_Count()+1);
+                        getMessageBox().Items.Add("在"+i+","+j+"位置生成了一只"+newMob.getMob_Name());
+                    }
+                }
+            }
         }
 
 

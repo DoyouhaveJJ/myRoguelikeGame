@@ -477,8 +477,8 @@ namespace myRougelikeGame
         }
 
         private void button14_Click(object sender, EventArgs e)
-        {   //“测试敌人”
-            ME.initEnemyAtBlock(myHero.getStandBlock(),1);
+        {
+            AddMobAction.AddAnMobOnRandomBlockNearbyHero(3, 4, 8);
         }
         
             
