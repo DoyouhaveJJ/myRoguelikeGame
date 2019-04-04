@@ -19,6 +19,8 @@ namespace myRougelikeGame.Battle
         private theHero myHero;
         private ArrayList theMobList;
         private DIYRandom dr = new DIYRandom();
+        private Translate tl = new Translate();
+        private AddItem addBody = new AddItem();
         public BattleField() {
             
         }
@@ -28,8 +30,9 @@ namespace myRougelikeGame.Battle
            
             setEnemyLastMove("");
             setHeroLastMove("");
-            getDistence().RemoveRange(0, getDistence().Count);
-            setTheMobList(null);
+            getDistence().Clear();
+            getMyHero().getStandBlock().setMob_Count(0);
+            getTheMobList().Clear();
         }
         public void initAI(EnemyAttack EnemyAttackAction)
         {
@@ -54,7 +57,11 @@ namespace myRougelikeGame.Battle
             }
 
         }
-
+        public void turnBodyToGround(){
+            for(int i = 0 ; i < getTheMobList().Count ; i ++){
+                getMyHero().getStandBlock().getItemInGround().Add(addBody.AddOneItemByID(tl.MobIDToBodyID(((defaultMob)getTheMobList()[i]).getMob_ID())));
+            }
+        }
         public bool isAllDead()
         {
             int i;

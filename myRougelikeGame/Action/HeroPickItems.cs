@@ -79,7 +79,7 @@ namespace myRougelikeGame.Action
             getHeroBagListTrue().Items.Clear();
             for (int i = 0; i < getTheBlock().getItemInGround().Count;i++ )
             {
-                selectedItem = (defaultItem)getTheBlock().getItemInGround()[i];
+                selectedItem = (defaultItem)(getTheBlock().getItemInGround()[i]);
                 getBlockItemList().Items.Add(selectedItem.getName());
                 getBlockItemListTrue().Items.Add(selectedItem);
             }

@@ -79,8 +79,7 @@ namespace myRougelikeGame
             this.myHero.buildBodyIndex();
             this.myHero.initBodyIndex();
             //更新地图
-            updata();
-            updataMap();
+            
             //初始化背包
             myHero.getHeroBag().setOwner(myHero);
             //设置消息栏
@@ -92,16 +91,21 @@ namespace myRougelikeGame
             AddMobAction.setMyWorld(myWorld);
            //myWorld.showWorld();
 
+            updata();
+            updataMap();
 
 
-
-
+            //测试模式
             setTestMode(false);
             
         }
         private void setTestMode(bool a)
         {
-
+            item_ID.Visible = a;
+            getItem.Visible = a;
+            button14.Visible = a;
+            button8.Visible = a;
+            button12.Visible = a;
             button4.Visible = a;
             button5.Visible = a;
             button7.Visible = a;
@@ -117,14 +121,15 @@ namespace myRougelikeGame
         private void button1_Click(object sender, EventArgs e)
         {   //辣鸡代码
             myHero.gainExp(200);
-            updata();
+            
         }
 
         void updata() {
-            //更新数据 辣鸡代码
-            Exp.Text = myHero.getExp().ToString();
-            maxExp.Text = myHero.getMaxExp().ToString();
-            Level.Text = myHero.getLevel().ToString();
+            //更新数据
+            AddMobAction.AddAnMobOnRandomBlockNearbyHero(5, 1, 20);
+            myHero.setStandBlock(myWorld.getBlockByXY(myHero.getLoc_x(), myHero.getLoc_y()));
+            label1.Text = myHero.getStandBlock().getName();
+            ME.MeetEnemyAtBlock(myHero,BF);
         
         }
         void updataMap() {
@@ -132,6 +137,7 @@ namespace myRougelikeGame
             int x = myHero.getLoc_x();
             int y = myHero.getLoc_y();
             locationLabel.Text = x + "," + y;
+            
             updataBlock1_1(x - 2,y + 2);
             updataBlock1_2(x - 1, y + 2);
             updataBlock1_3(x, y + 2);
@@ -147,7 +153,7 @@ namespace myRougelikeGame
             updataBlock3_1(x - 2, y);
             updataBlock3_2(x - 1, y);
             updataBlock3_3(x, y);
-            myHero.setStandBlock(myWorld.getBlockByXY(x, y));
+   //         myHero.setStandBlock(myWorld.getBlockByXY(x, y));
 
             updataBlock3_4(x + 1, y);
             updataBlock3_5(x + 2, y);
@@ -329,24 +335,28 @@ namespace myRougelikeGame
         {
             myHero.move_N();
             updataMap();
+            updata();
         }
 
         private void Move_E_Click(object sender, EventArgs e)
         {
             myHero.move_E();
             updataMap();
+            updata();
         }
 
         private void Move_S_Click(object sender, EventArgs e)
         {
             myHero.move_S();
             updataMap();
+            updata();
         }
 
         private void Move_W_Click(object sender, EventArgs e)
         {
             myHero.move_W();
             updataMap();
+            updata();
         }
 
         void setColorByType(Label lb, int type){
@@ -479,6 +489,11 @@ namespace myRougelikeGame
         private void button14_Click(object sender, EventArgs e)
         {
             AddMobAction.AddAnMobOnRandomBlockNearbyHero(3, 4, 8);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
         
             

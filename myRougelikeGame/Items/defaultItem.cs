@@ -87,7 +87,10 @@ namespace myRougelikeGame.Items
         private int Add_talk;      //说话
         private int Add_endurance; //耐力
         private int Add_eye;       //视力
-        
+
+
+        //尸体
+      
 
 
 

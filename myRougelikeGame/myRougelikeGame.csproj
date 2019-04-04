@@ -80,6 +80,8 @@
     <Compile Include="Help\HelpItem.Designer.cs">
       <DependentUpon>HelpItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Items\Body\body_Goblin.cs" />
+    <Compile Include="Items\Body\body_Slime.cs" />
     <Compile Include="Items\defaultItem.cs" />
     <Compile Include="Items\Food\food_Apple.cs" />
     <Compile Include="Items\Food\food_rawWater.cs" />

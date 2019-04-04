@@ -79,6 +79,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.cheeckBlock = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Level
@@ -674,11 +675,22 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(114, 230);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // theGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 350);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.cheeckBlock);
             this.Controls.Add(this.button13);
@@ -792,6 +804,7 @@
         private System.Windows.Forms.Label labelTest;
         private System.Windows.Forms.Button cheeckBlock;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Label label1;
 
        
     }

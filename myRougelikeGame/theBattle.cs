@@ -48,6 +48,7 @@ namespace myRougelikeGame
         public theBattle()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
         private void BattleMsg_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -64,7 +65,7 @@ namespace myRougelikeGame
             BF.initAI(EnemyAttackAction);
             heroName.Text = BF.getMyHero().GetName();
             BF.initDistence();
-                updata(index);
+            updata(index);
         }
         public void EndTurn()
         {
@@ -204,6 +205,7 @@ namespace myRougelikeGame
                     ((defaultMob)BF.getMyHero().getStandBlock().getMob_list()[i]).setIsFirstDead(false);
                 }
             }
+            BF.turnBodyToGround();
             BF.clearBattle();
             this.Close();
         }

@@ -14,7 +14,16 @@ namespace myRougelikeGame.Function
             }
         }
         */
-
+        public int MobIDToBodyID(int mobID)
+        {
+            switch (mobID)
+            {
+                case 1: { return 22; }
+                case 2: { return 23; }
+                default:{ return -1; }
+            }
+            return -1;
+        }
 
 
 

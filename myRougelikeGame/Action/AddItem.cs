@@ -24,6 +24,7 @@ using myRougelikeGame.Items.Wearable.Shoes;
 using myRougelikeGame.Items.Wearable.SignsForArm;
 using myRougelikeGame.Items.Wearable.SignsForChest;
 using myRougelikeGame.Items.Wearable.Stocks;
+using myRougelikeGame.Items.Body;
 using myRougelikeGame.Map;
 
 
@@ -361,6 +362,20 @@ namespace myRougelikeGame.Action
                         a = new stock_WarmStock();
                         a.setMessageBox(getMessageBox());
                         
+                        return a;
+                    }
+                case 22:
+                    {
+                        a = new body_Slime();
+                        a.setMessageBox(getMessageBox());
+
+                        return a;
+                    }
+                case 23:
+                    {
+                        a = new body_Goblin();
+                        a.setMessageBox(getMessageBox());
+
                         return a;
                     }
                 default:
