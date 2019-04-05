@@ -80,12 +80,14 @@
             // 
             // blockItemList
             // 
+            this.blockItemList.AllowDrop = true;
             this.blockItemList.FormattingEnabled = true;
             this.blockItemList.ItemHeight = 12;
             this.blockItemList.Location = new System.Drawing.Point(12, 62);
             this.blockItemList.Name = "blockItemList";
             this.blockItemList.Size = new System.Drawing.Size(158, 208);
             this.blockItemList.TabIndex = 3;
+            this.blockItemList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.blockItemList_MouseDown);
             // 
             // heroBagListTrue
             // 

@@ -65,6 +65,8 @@
     <Compile Include="AI\easyBattleAI.cs" />
     <Compile Include="Battle\BattleField.cs" />
     <Compile Include="Battle\BattleSeeEachOther.cs" />
+    <Compile Include="Craft\CraftList.cs" />
+    <Compile Include="Craft\DoCraft.cs" />
     <Compile Include="Function\Translate.cs" />
     <Compile Include="Help\AboutHeroSetting.cs">
       <SubType>Form</SubType>
@@ -85,6 +87,11 @@
     <Compile Include="Items\defaultItem.cs" />
     <Compile Include="Items\Food\food_Apple.cs" />
     <Compile Include="Items\Food\food_rawWater.cs" />
+    <Compile Include="Items\Materials\material_Bone.cs" />
+    <Compile Include="Items\Materials\material_Glue.cs" />
+    <Compile Include="Items\Materials\material_GreenSkin.cs" />
+    <Compile Include="Items\NullItem.cs" />
+    <Compile Include="Items\Weapon\weapon_BoneStick.cs" />
     <Compile Include="Items\Weapon\weapon_LongStick.cs" />
     <Compile Include="Items\Weapon\weapon_Stick.cs" />
     <Compile Include="Items\Wearable\BagForHand\bagforhand_PlasticBag.cs" />
@@ -222,6 +229,12 @@
     <Compile Include="theBlock.Designer.cs">
       <DependentUpon>theBlock.cs</DependentUpon>
     </Compile>
+    <Compile Include="theCraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theCraft.Designer.cs">
+      <DependentUpon>theCraft.cs</DependentUpon>
+    </Compile>
     <Compile Include="theLoot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +337,9 @@
     <EmbeddedResource Include="theBlock.resx">
       <DependentUpon>theBlock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="theCraft.resx">
+      <DependentUpon>theCraft.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="theGame.resx">
       <DependentUpon>theGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,6 +382,7 @@
   <ItemGroup>
     <Content Include="TextFile1.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

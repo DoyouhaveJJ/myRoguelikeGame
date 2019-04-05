@@ -67,5 +67,10 @@ namespace myRougelikeGame
             HPI.moveOneItemBagToBlock();
             updata();
         }
+
+        private void blockItemList_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
     }
 }

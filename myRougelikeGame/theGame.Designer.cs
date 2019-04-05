@@ -80,6 +80,7 @@
             this.cheeckBlock = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Level
@@ -114,7 +115,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(660, 307);
+            this.button1.Location = new System.Drawing.Point(696, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -538,7 +539,7 @@
             // 
             // item_ID
             // 
-            this.item_ID.Location = new System.Drawing.Point(302, 309);
+            this.item_ID.Location = new System.Drawing.Point(685, 271);
             this.item_ID.Name = "item_ID";
             this.item_ID.Size = new System.Drawing.Size(74, 21);
             this.item_ID.TabIndex = 39;
@@ -546,9 +547,9 @@
             // 
             // getItem
             // 
-            this.getItem.Location = new System.Drawing.Point(383, 307);
+            this.getItem.Location = new System.Drawing.Point(666, 298);
             this.getItem.Name = "getItem";
-            this.getItem.Size = new System.Drawing.Size(99, 23);
+            this.getItem.Size = new System.Drawing.Size(93, 23);
             this.getItem.TabIndex = 40;
             this.getItem.Text = "输入ID获取物品";
             this.getItem.UseVisualStyleBackColor = true;
@@ -586,7 +587,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(488, 307);
+            this.button8.Location = new System.Drawing.Point(555, 275);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(42, 23);
             this.button8.TabIndex = 44;
@@ -637,7 +638,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(536, 280);
+            this.button12.Location = new System.Drawing.Point(603, 298);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(65, 48);
             this.button12.TabIndex = 49;
@@ -667,7 +668,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(406, 264);
+            this.button14.Location = new System.Drawing.Point(603, 275);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(75, 23);
             this.button14.TabIndex = 51;
@@ -685,11 +686,23 @@
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button15.Location = new System.Drawing.Point(240, 298);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(65, 39);
+            this.button15.TabIndex = 53;
+            this.button15.Text = "合成";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // theGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 350);
+            this.Controls.Add(this.button15);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.cheeckBlock);
@@ -805,6 +818,7 @@
         private System.Windows.Forms.Button cheeckBlock;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button15;
 
        
     }

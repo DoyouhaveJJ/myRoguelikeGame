@@ -145,6 +145,7 @@ namespace myRougelikeGame.Player
 
         public double getBurdenNow()
         {
+            setBurdenNow();
             return burdenNow;
         }
         public void setBurdenNow()

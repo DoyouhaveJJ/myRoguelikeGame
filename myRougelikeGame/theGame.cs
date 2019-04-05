@@ -17,6 +17,7 @@ using myRougelikeGame.Help;
 using myRougelikeGame.Action;
 using myRougelikeGame.Battle;
 using myRougelikeGame.Loot;
+using myRougelikeGame.Craft;
 namespace myRougelikeGame
 {
     public partial class theGame : Form
@@ -46,6 +47,7 @@ namespace myRougelikeGame
          *      …………………………………………
          * 
          * */
+        DoCraft doCraft = new DoCraft();
         AddMob AddMobAction = new AddMob();
         HeroPickItems HeroPickItemsAction = new HeroPickItems();
         MeetEnemy ME = new MeetEnemy();
@@ -90,13 +92,15 @@ namespace myRougelikeGame
             AddMobAction.setMyHero(myHero);
             AddMobAction.setMyWorld(myWorld);
            //myWorld.showWorld();
+            //初始化合成器
+            doCraft.setMyHero(myHero);
 
             updata();
             updataMap();
 
 
             //测试模式
-            setTestMode(false);
+            setTestMode(true);
             
         }
         private void setTestMode(bool a)
@@ -494,6 +498,13 @@ namespace myRougelikeGame
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            theCraft tc = new theCraft();
+            tc.Tag = doCraft;
+            tc.ShowDialog(this);
         }
         
             

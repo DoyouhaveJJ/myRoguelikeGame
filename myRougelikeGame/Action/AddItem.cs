@@ -25,6 +25,7 @@ using myRougelikeGame.Items.Wearable.SignsForArm;
 using myRougelikeGame.Items.Wearable.SignsForChest;
 using myRougelikeGame.Items.Wearable.Stocks;
 using myRougelikeGame.Items.Body;
+using myRougelikeGame.Items.Materials;
 using myRougelikeGame.Map;
 
 
@@ -374,6 +375,34 @@ namespace myRougelikeGame.Action
                 case 23:
                     {
                         a = new body_Goblin();
+                        a.setMessageBox(getMessageBox());
+
+                        return a;
+                    }
+                case 24:
+                    {
+                        a = new material_Glue();
+                        a.setMessageBox(getMessageBox());
+
+                        return a;
+                    }
+                case 25:
+                    {
+                        a = new material_Bone();
+                        a.setMessageBox(getMessageBox());
+
+                        return a;
+                    }
+                case 26:
+                    {
+                        a = new material_GreenSkin();
+                        a.setMessageBox(getMessageBox());
+
+                        return a;
+                    }
+                case 27:
+                    {
+                        a = new weapon_BoneStick();
                         a.setMessageBox(getMessageBox());
 
                         return a;

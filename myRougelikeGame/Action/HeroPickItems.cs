@@ -59,11 +59,10 @@ namespace myRougelikeGame.Action
             if (getHeroBagList().SelectedItems.Count > 0)
             {
                 int index = getHeroBagList().SelectedIndex;
-                
+                selectedItem = (defaultItem)(getHeroBagListTrue().Items[index]);
                 getHeroBagList().Items.RemoveAt(index);
                 getHeroBagListTrue().Items.RemoveAt(index);
-               
-
+                
                 getHero().getHeroBag().DestoryAnItem(selectedItem);
                 getTheBlock().getItemInGround().Add(selectedItem);
             }

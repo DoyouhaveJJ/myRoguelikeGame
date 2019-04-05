@@ -124,6 +124,8 @@ namespace myRougelikeGame
                     case 18: { UseButton.Visible = false; EquipButton.Visible = true; if (selectedItem.getIsEquited()) EquipButton.Text = "卸下"; else EquipButton.Text = "装备"; break; }
                     case 19: { UseButton.Visible = false; EquipButton.Visible = true; if (selectedItem.getIsEquited()) EquipButton.Text = "卸下"; else EquipButton.Text = "装备"; break; }
                     case 20: { UseButton.Visible = false; EquipButton.Visible = true; if (selectedItem.getIsEquited()) EquipButton.Text = "卸下"; else EquipButton.Text = "装备"; break; }
+                    case 21: { UseButton.Visible = false; EquipButton.Visible = false; break; }
+                    case 22: { UseButton.Visible = false; EquipButton.Visible = false; break; }   
 
 
                 }
