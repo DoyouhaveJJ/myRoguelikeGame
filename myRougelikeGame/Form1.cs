@@ -38,5 +38,12 @@ namespace myRougelikeGame
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            setMyHero start = new setMyHero();
+            start.ShowDialog(this);
+            this.Close();
+        }
     }
 }

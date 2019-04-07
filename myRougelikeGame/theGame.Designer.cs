@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(theGame));
             this.Level = new System.Windows.Forms.Label();
             this.Exp = new System.Windows.Forms.Label();
             this.maxExp = new System.Windows.Forms.Label();
@@ -452,6 +453,7 @@
             // 
             // Move_N
             // 
+            this.Move_N.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Move_N.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Move_N.Location = new System.Drawing.Point(68, 214);
             this.Move_N.Name = "Move_N";
@@ -463,6 +465,7 @@
             // 
             // Move_E
             // 
+            this.Move_E.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Move_E.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Move_E.Location = new System.Drawing.Point(107, 252);
             this.Move_E.Name = "Move_E";
@@ -474,6 +477,7 @@
             // 
             // Move_S
             // 
+            this.Move_S.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Move_S.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Move_S.Location = new System.Drawing.Point(68, 292);
             this.Move_S.Name = "Move_S";
@@ -485,6 +489,7 @@
             // 
             // Move_W
             // 
+            this.Move_W.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Move_W.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Move_W.Location = new System.Drawing.Point(29, 252);
             this.Move_W.Name = "Move_W";
@@ -507,6 +512,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.Location = new System.Drawing.Point(68, 253);
             this.button2.Name = "button2";
@@ -518,17 +524,22 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(169, 298);
+            this.button3.Location = new System.Drawing.Point(169, 302);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(65, 40);
+            this.button3.Size = new System.Drawing.Size(36, 36);
             this.button3.TabIndex = 35;
-            this.button3.Text = "背包";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button6
             // 
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Location = new System.Drawing.Point(169, 252);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(55, 36);
@@ -648,6 +659,7 @@
             // 
             // button13
             // 
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button13.Location = new System.Drawing.Point(230, 251);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(56, 39);
@@ -658,6 +670,7 @@
             // 
             // cheeckBlock
             // 
+            this.cheeckBlock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cheeckBlock.Location = new System.Drawing.Point(292, 251);
             this.cheeckBlock.Name = "cheeckBlock";
             this.cheeckBlock.Size = new System.Drawing.Size(56, 39);
@@ -688,12 +701,16 @@
             // 
             // button15
             // 
+            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button15.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button15.Location = new System.Drawing.Point(240, 298);
+            this.button15.Location = new System.Drawing.Point(211, 301);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(65, 39);
+            this.button15.Size = new System.Drawing.Size(36, 36);
             this.button15.TabIndex = 53;
-            this.button15.Text = "合成";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
