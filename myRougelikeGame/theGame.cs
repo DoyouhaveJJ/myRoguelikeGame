@@ -39,7 +39,7 @@ namespace myRougelikeGame
          *      实现天气系统
          *      实现气温四季变化系统
          *      实现大地图敌人随机生成和随机移动系统
-         *      实现合成系统
+         *      实现合成系统DONE
          *      实现载具系统
          *      实现敌人互相斗殴系统
          *      实现昼夜交替系统
@@ -100,7 +100,7 @@ namespace myRougelikeGame
 
 
             //测试模式
-            setTestMode(true);
+            setTestMode(false);
             
         }
         private void setTestMode(bool a)

@@ -22,7 +22,17 @@ namespace myRougelikeGame.Player.Body
         private defaultItem takenNecklace;
 
 
-
+        public void getDamage(int damage)
+        {
+            if (getEndurance() - damage <= 0)
+            {
+                setEndurance(0);
+            }
+            else
+            {
+                setEndurance(getEndurance() - damage);
+            }
+        }
 
         public int getEndurance()
         {

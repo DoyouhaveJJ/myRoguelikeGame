@@ -7,7 +7,6 @@ using myRougelikeGame.Function;
 using myRougelikeGame.Player.Body;
 using myRougelikeGame.Map;
 using myRougelikeGame.Action;
-
 namespace myRougelikeGame.Player
 {
     class theHero : man
@@ -698,6 +697,24 @@ namespace myRougelikeGame.Player
         {
             return getExp() >= getMaxExp();
         }
+        public void getDamage(int damage)
+        {
+            if (getHp() - damage <= 0)
+            {
+                setHp(0);
+            }
+            else
+            {
+                setHp(getHp() - damage);
+            }
+            if (isDead())
+            {
+                theGameOver over = new theGameOver();
+                over.Tag = this;
+                over.ShowDialog();
+            }
+        }
+
         public bool isDead()
         {
             return getHp() <= 0;

@@ -30,7 +30,17 @@ namespace myRougelikeGame.Player.Body
 
 
 
-
+        public void getDamage(int damage)
+        {
+            if (getEndurance() - damage <= 0)
+            {
+                setEndurance(0);
+            }
+            else
+            {
+                setEndurance(getEndurance() - damage);
+            }
+        }
 
         public defaultItem getTakenGlove()
         {

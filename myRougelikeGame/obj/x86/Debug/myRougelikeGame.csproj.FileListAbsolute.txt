@@ -121,3 +121,4 @@ U:\myRoguelikeGame\myRougelikeGame\obj\x86\Debug\GenerateResource.write.1.tlog
 U:\myRoguelikeGame\myRougelikeGame\bin\Debug\myRougelikeGame.exe
 U:\myRoguelikeGame\myRougelikeGame\bin\Debug\myRougelikeGame.pdb
 U:\myRoguelikeGame\myRougelikeGame\obj\x86\Debug\myRougelikeGame.theCraft.resources
+U:\myRoguelikeGame\myRougelikeGame\obj\x86\Debug\myRougelikeGame.theGameOver.resources

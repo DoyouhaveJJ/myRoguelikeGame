@@ -82,6 +82,10 @@
     <Compile Include="Help\HelpItem.Designer.cs">
       <DependentUpon>HelpItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Illness\illInitilizer.cs" />
+    <Compile Include="Illness\illSystem.cs" />
+    <Compile Include="Illness\ills\defaultIll.cs" />
+    <Compile Include="Illness\ills\ill_Cold.cs" />
     <Compile Include="Items\Body\body_Goblin.cs" />
     <Compile Include="Items\Body\body_Slime.cs" />
     <Compile Include="Items\defaultItem.cs" />
@@ -235,6 +239,12 @@
     <Compile Include="theCraft.Designer.cs">
       <DependentUpon>theCraft.cs</DependentUpon>
     </Compile>
+    <Compile Include="theGameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theGameOver.Designer.cs">
+      <DependentUpon>theGameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="theLoot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="theGame.resx">
       <DependentUpon>theGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theGameOver.resx">
+      <DependentUpon>theGameOver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="theLoot.resx">
       <DependentUpon>theLoot.cs</DependentUpon>
