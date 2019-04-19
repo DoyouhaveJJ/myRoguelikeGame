@@ -14,7 +14,7 @@ namespace myRougelikeGame.Illness
         private defaultIll ill_Hero;
         private DIYRandom dr = new DIYRandom();
 
-        public defaultIll InitIlllByIDRate(int ID, int rate)
+        public defaultIll InitIllByIDwithRate(int ID, int rate)
         {
             if (dr.startBet(rate, 1000))
             {
@@ -28,11 +28,17 @@ namespace myRougelikeGame.Illness
 
 
         public void HeroGetIll(defaultIll ill){
+            if (myhero.getHero_Status() != 1)//已经染病了 不能再染病了
+                return;
             ill_Hero = ill;
+            getMyhero().setHero_Status(2);
+       //     ill_Hero().set
+            
+
         }
 
         public void SufferByTurn(){
-
+            
 
         }
 

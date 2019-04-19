@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using myRougelikeGame.Player;
 namespace myRougelikeGame.Illness.ills
 {
     class defaultIll
@@ -13,10 +13,10 @@ namespace myRougelikeGame.Illness.ills
         private int badness;//最大为1000
         private int healDifficulty;//最大为1000
         private int rate;//最大为1000
+        private theHero myHero;
 
 
-
-
+        virtual public void Symptom(){}//症状
         public int getID()
         {
             return ID;
@@ -65,5 +65,14 @@ namespace myRougelikeGame.Illness.ills
         {
             this.rate = rate;
         }
+
+	    public theHero getMyHero() {
+		    return myHero;
+	    }
+
+	    public void setMyHero(theHero myHero) {
+		    this.myHero = myHero;
+        }
+
     }
 }

@@ -130,7 +130,7 @@ namespace myRougelikeGame
 
         void updata() {
             //更新数据
-            AddMobAction.AddAnMobOnRandomBlockNearbyHero(5, 1, 20);
+            AddMobAction.AddAnMobOnRandomBlockNearbyHero(5, 1, 100);
             myHero.setStandBlock(myWorld.getBlockByXY(myHero.getLoc_x(), myHero.getLoc_y()));
             label1.Text = myHero.getStandBlock().getName();
             ME.MeetEnemyAtBlock(myHero,BF);

@@ -74,7 +74,7 @@ namespace myRougelikeGame.Player
         private double maxBurden;   
         private int Energy;         //精力
         private int maxEnergy;
-        
+        private int hero_Status;    //状况
 
         private int EnergyConsumeByAttack;
         private int EnergyConsumeByMove;
@@ -666,7 +666,15 @@ namespace myRougelikeGame.Player
         {
             this.standBlock = standBlock;
         }
+        public int getHero_Status()
+        {
+            return hero_Status;
+        }
 
+        public void setHero_Status(int hero_Status)
+        {
+            this.hero_Status = hero_Status;
+        }
 
         public int getEnergyConsumeByLoot()
         {
@@ -1007,7 +1015,6 @@ namespace myRougelikeGame.Player
             }
             return false;
         }
-
         public void initBodyIndex() {
             //头
             getHero_Chest().setInjuredLevel(1);

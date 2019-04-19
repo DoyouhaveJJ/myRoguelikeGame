@@ -35,6 +35,18 @@ namespace myRougelikeGame.Function
             return "";
         }
 
+        public string StatusToString(int a)
+        {
+            switch (a)
+            {
+                case 1: return "正常";
+                case 2: return "生病";
+            }
+            return "";
+
+        }
+
+
         public string JobToString(int a) {
             switch (a) {
                 case 1: return "无职业";

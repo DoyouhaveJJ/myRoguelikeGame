@@ -16,5 +16,10 @@ namespace myRougelikeGame.Illness.ills
             setBadness(5);
             setHealDifficulty(50);
         }
+        public override void Symptom()
+        {
+            base.Symptom();
+
+        }
     }
 }
