@@ -506,6 +506,17 @@ namespace myRougelikeGame
             tc.Tag = doCraft;
             tc.ShowDialog(this);
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                setTestMode(true);
+            }
+            else {
+                setTestMode(false);
+            }
+        }
         
             
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using myRougelikeGame.Player;
 namespace myRougelikeGame.Illness.ills
 {
     class ill_Cold : defaultIll
